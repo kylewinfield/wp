@@ -1,1 +1,87 @@
-/* Insert your styles here */
+
+nav,
+header,
+footer,
+.main
+{
+    background-color: black;
+    color: white;
+    font-family: 'Aleo', serif;
+    margin-top: 75px;
+    margin-bottom: 75px;
+}
+
+header
+{
+    border: 2px solid white;
+}
+
+h1 
+{
+    font-size: 100px;
+    text-align: center;
+    font-family: 'Prata', serif;
+
+}
+
+nav
+{
+    text-align: center;
+    padding: 20px;
+    word-spacing: 5em;
+    font-family: 'Aleo', serif;
+}
+
+a
+{
+    padding: 15px;
+    border: 2px solid white;
+    font-size: 20px;
+    text-decoration: none;
+}
+
+a:link, 
+a:visited
+{
+    color:rgb(224, 224, 224)
+}
+
+a:hover
+{
+    background-color: rgb(49, 51, 51);
+}
+
+.main
+{
+    font-size: 25px;
+    padding-left: 200px;
+    padding-right: 500px;
+    border: 5px solid black;
+}
+
+#img1
+{
+  
+}
+
+body
+{
+    background-image: url("agustin-fernandez-Znyjl9pbaUs-unsplash.jpg");
+    min-height: 500px;
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+footer
+{
+    border: 2px solid rgb(85, 85, 85);
+}
+
+#email,
+#phone
+{
+    filter: invert(100%);
+    padding-right:10px;
+}
