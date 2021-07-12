@@ -1,14 +1,15 @@
 
 nav,
 header,
-footer,
-.main
+.main,
+.foot
 {
     background-color: black;
     color: white;
     font-family: 'Aleo', serif;
-    margin-top: 75px;
-    margin-bottom: 75px;
+    margin-top: 100px;
+    margin-bottom: 100px;
+    box-shadow: 3px 5px 4px rgba(0, 0, 0, 0.342);
 }
 
 header
@@ -30,6 +31,7 @@ nav
     padding: 20px;
     word-spacing: 5em;
     font-family: 'Aleo', serif;
+    border: 2px solid white;
 }
 
 a
@@ -51,33 +53,72 @@ a:hover
     background-color: rgb(49, 51, 51);
 }
 
-.main
+#cuts
+{
+   margin: 1000px;
+}
+
+.main,
+.foot
 {
     font-size: 25px;
     padding-left: 200px;
-    padding-right: 500px;
     border: 5px solid black;
+
 }
 
 #img1
 {
-  
+  border: 2px solid rgba(202, 189, 189, 0.486);
 }
 
-body
+/*
+#parallaxImg1
 {
-    background-image: url("../../media/agustin-fernandez-Znyjl9pbaUs-unsplash.jpg");
-    min-height: 500px;
+    background-image: url("jason-leung-2seUdPQNy_I-unsplash.jpg");
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+*/
+
+
+#parallaxImg2
+{
+    background-image: url("tim-mossholder-q49oU8NeOHQ-unsplash.jpg");
     background-attachment: fixed;
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
 }
 
-footer
+#quotes
 {
-    border: 2px solid rgb(85, 85, 85);
+    text-align: center;
 }
+
+#quotes p
+{
+    display:inline-block;
+    text-align: center;
+    max-width: 300px;
+    margin-right: 100px;
+    margin-left: 100px;
+}
+
+
+
+
+body
+{
+    background-image: url("agustin-fernandez-Znyjl9pbaUs-unsplash.jpg");
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
 
 #email,
 #phone
