@@ -44,7 +44,7 @@
           crafted barber experience.
         </p>
 
-        <img id="img1" src="arthur-humeau-Twd3yaqA2NM-unsplash.jpg" alt="Man getting beard shaved" width="500"
+        <img id="img1" src="../../media/arthur-humeau-Twd3yaqA2NM-unsplash.jpg" alt="Man getting beard shaved" width="500"
           height="400">
 
       </section>
@@ -90,9 +90,9 @@
 
     <section class="foot" , id="contact">
       <h2>CONTACT US</h2>
-      <p><img id="email" src="2099199.png" alt="Email Icon" width="15" height="15">
+      <p><img id="email" src="../../media/2099199.png" alt="Email Icon" width="15" height="15">
         secret.barber@fakeemail.com</p>
-      <p><img id="phone" src="597177.png" alt="Phone icon" width="15" height="15">
+      <p><img id="phone" src="../../media/597177.png" alt="Phone icon" width="15" height="15">
         +0123 456 789</p>
 
     </section>

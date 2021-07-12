@@ -86,7 +86,7 @@ a:hover
 
 #parallaxImg2
 {
-    background-image: url("tim-mossholder-q49oU8NeOHQ-unsplash.jpg");
+    background-image: url("../../media/tim-mossholder-q49oU8NeOHQ-unsplash.jpg");
     background-attachment: fixed;
     background-position: center;
     background-repeat: no-repeat;
@@ -112,7 +112,7 @@ a:hover
 
 body
 {
-    background-image: url("agustin-fernandez-Znyjl9pbaUs-unsplash.jpg");
+    background-image: url("../../media/agustin-fernandez-Znyjl9pbaUs-unsplash.jpg");
     background-attachment: fixed;
     background-position: center;
     background-repeat: no-repeat;
