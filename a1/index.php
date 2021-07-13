@@ -29,7 +29,7 @@
     <div>
       <a href="index.php">Home</a>
       <a href="shop.php">Services</a>
-      <a>Contact</a>
+      <a href="#contact"> Contact</a>
     </div>
   </nav>
 
@@ -49,53 +49,7 @@
 
       </section>
 
-      <section class="main" , id="cuts">
-
-        <div id="everycut">
-
-          <h2>CUTS</h2>
-          <div class="cutsdivide">
-            <img class="imgIcon" src="../../media/1930.png" alt="Scissors" width="150" height="150">
-            
-              <h3>Haircuts</h3>
-              <p>
-                Let Secret Barber cover your basic cuts, whether it be a full re-style or just a trim, our team of
-                professionals has you covered.
-              </p>
-
-    
-          </div>
-          <div class="cutsdivide">
-            <img class="imgIcon" src="../../media/3615156.png" alt="razor" width="150" height="150">
-            
-              <h3>Fades</h3>
-              <p>
-                When it comes to fades, we know just how important they are to you and we've got the secret
-                for a perfect fade every time.
-              </p>
-            
-          </div>
-          <div class="cutsdivide">
-            <img class="imgIcon" src="../../media/40648.png" alt="razor" width="150" height="170">
-            
-              <h3>Shave</h3>
-              <p>
-                Shaving your beard can be a messy and disastrous procedure, we've all seen and heard the worst of it
-                let the professionals handle it for you while you kick back and relax.
-              </p>
-            
-          </div>
-          <div class="cutsdivide">
-            <img class="imgIcon" src="../../media/1122840.png" alt="hair product" width="150" height="150">
-            
-              <h3>Products</h3>
-              <p>
-                Everyone knows the secret to enhancing your hair game is good quality products, check our store
-                to learn more!
-              </p>
-            
-          </div>
-      </section>
+     
 
       <section class="main", id="customer">
         <h2>WHAT OUR CUSTOMERS HAVE TO SAY</h2>
@@ -105,6 +59,20 @@
           <p>"These guys were extremely helpful when I needed to change up my look, love the guys there!"</p>
         </div>
         
+
+      </section>
+
+      <section class="main">
+        <h2>OPENING HOURS</h2>
+
+        <div id="hours">
+          <p>Monday: 8am - 4pm</p>
+          <p>Tuesday: 8am - 7pm</p>
+          <p>Wednesday: 8am - 4pm</p>
+          <p>Thursday: 8am - 7pm</p>
+          <p>Saturday: 7am - 2pm</p>
+          <p>Sunday: Closed</p>
+        </div>
 
       </section>
 
