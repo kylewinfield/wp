@@ -41,9 +41,9 @@
       <section class="main" , id="products">
 
 
-        <img src="../../mediahairwax.jpg">
-        <img src="../../mediashavingcream.jpg">
-        <img src="../../mediabeardoil.jpg">
+        <img src="../../media/hairwax.jpg">
+        <img src="../../media/shavingcream.jpg">
+        <img src="../../media/beardoil.jpg">
 
 
         

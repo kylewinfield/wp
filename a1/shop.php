@@ -45,7 +45,7 @@
         <div id="everycut">
 
           <div class="cutsdivide">
-            <img class="imgIcon" src="../../media1930.png" alt="Scissors" width="150" height="150">
+            <img class="imgIcon" src="../../media/1930.png" alt="Scissors" width="150" height="150">
             
               <h3>Haircuts</h3>
               <p>
@@ -56,7 +56,7 @@
     
           </div>
           <div class="cutsdivide">
-            <img class="imgIcon" src="../../media3615156.png" alt="razor" width="150" height="150">
+            <img class="imgIcon" src="../../media/3615156.png" alt="razor" width="150" height="150">
             
               <h3>Fades</h3>
               <p>
@@ -66,7 +66,7 @@
             
           </div>
           <div class="cutsdivide">
-             <img class="imgIcon" src="../../media40648.png" alt="razor" width="150" height="170"> 
+             <img class="imgIcon" src="../../media/40648.png" alt="razor" width="150" height="170"> 
                         
               <h3>Shave</h3>
               <p>
@@ -77,7 +77,7 @@
           </div>
           <a href="products.php">
           <div class="cutsdivide", id="product">
-            <img class="imgIcon" src="../../media1122840.png" alt="hair product" width="150" height="150">
+            <img class="imgIcon" src="../../media/1122840.png" alt="hair product" width="150" height="150">
             
               <h3>Products</h3>
               <p>
