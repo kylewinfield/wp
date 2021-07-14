@@ -12,7 +12,7 @@
   <script src='../wireframe.js'></script>
 
   <link href="https://fonts.googleapis.com/css2?family=Aleo:ital@1&display=swap" rel="stylesheet">
-  <link href="https://fonts.googleapis.com/css2?family=Prata&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap" rel="stylesheet">
 
 
 </head>
@@ -20,8 +20,9 @@
 <body>
 
   <header>
-    <div>
-      <h1>Secret Barber -icon-</h1>
+    <div id="top">
+      <img id="logo" src="../../media/razor.png">
+      <h1>SECRET BARBER</h1>
     </div>
   </header>
 
@@ -49,16 +50,15 @@
 
       </section>
 
-     
 
-      <section class="main", id="customer">
+      <section class="main" , id="customer">
         <h2>WHAT OUR CUSTOMERS HAVE TO SAY</h2>
         <div id="quotes">
           <p>"A great customer service and I'm so happy with my new cut."</p>
           <p>"Secret Barber is my new go to barber, the staff there are very welcoming and friendly."</p>
           <p>"These guys were extremely helpful when I needed to change up my look, love the guys there!"</p>
         </div>
-        
+
 
       </section>
 
@@ -91,7 +91,7 @@
 
     </section>
 
-    <div class="foot", id="disclaimer">&copy;
+    <div class="foot" , id="disclaimer">&copy;
       <script>
         document.write(new Date().getFullYear());
       </script> Kyle Winfield, s3541867. Last modified

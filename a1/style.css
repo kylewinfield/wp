@@ -7,31 +7,50 @@ header,
 #cuts,
 #servicehead
 {
-    background-color: black;
+    background-color: rgba(0, 0, 0, 0.945);
     color: white;
     font-family: 'Aleo', serif;
     margin-top: 50px;
     margin-bottom: 50px;
-    box-shadow: 3px 5px 4px rgba(0, 0, 0, 0.342);
+    box-shadow: 5px px 10px rgba(0, 0, 0, 0.521);
     border: 3px solid rgb(245, 162, 67);
 }
 
 header
 {
     margin-bottom: -50px;
+    text-align: center;
+}
+
+
+
+h1
+{
+    font-size: 150px;
+    font-family: 'Bebas Neue';
+    letter-spacing: 8px;
+    line-height:140px;
+    width: 410px;
+    margin-left: auto;
+    margin-right: auto;
+
+}
+
+#top
+{
+    width: 1080px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+#logo
+{
+    float:left;
 }
 
 article h2
 {
     text-align:center;
-
-}
-
-h1
-{
-    font-size: 100px;
-    text-align: center;
-    font-family: 'Prata', serif;
 
 }
 
@@ -47,7 +66,6 @@ nav a
 {
     padding: 10px;
     border-radius: 10px;
-   /* border: 2px solid white;*/
     font-size: 40px;
     text-decoration: none;
 
@@ -96,11 +114,58 @@ h3
     font-size: 45px;
 }
 
-#hours
+#hours,
+#products
 {
     text-align: center;
     font-size: 35px;
     color:rgb(245, 162, 67)
+}
+
+#radio
+{
+    border: 5px solid rgb(245, 162, 67);
+    border-radius: 10px;
+    width:578px;
+    margin-top:10px;
+    margin-left:auto;
+    margin-right:auto;
+    text-align:right;
+}
+
+#radio input
+{
+    position:fixed;
+    opacity:0;
+    height:0;
+    width:0;
+    top: 0;
+    left:0;
+    margin:0;
+    padding:0;
+}
+
+input:checked + label
+{
+    color:rgb(0, 0, 0);
+    background-color:rgb(245, 162, 67);
+    padding-top:10px;
+    padding-bottom:10px;
+}
+
+#radio p
+{
+    
+    margin-top:5px;
+    margin-bottom:5px;
+    display:inline-block;
+    padding-left:5px;
+    padding-right:17px;
+}
+
+button
+{
+    size:20px;
 }
 
 
@@ -114,10 +179,9 @@ h3
 }
 
 
-
 #cuts
 {
-    background-image: url("../../media/tim-mossholder-q49oU8NeOHQ-unsplash.jpg");
+    background-image: url("../../mediatim-mossholder-q49oU8NeOHQ-unsplash.jpg");
     background-attachment: fixed;
     background-position: center;
     background-repeat: no-repeat;
@@ -129,9 +193,7 @@ h3
 
 .imgIcon
 {
-    
     filter:invert(100%);
-   
 }
 
 #cuts img
@@ -195,9 +257,6 @@ h3
     margin-left: 100px;
 
 }
-
-
-
 
 body
 {
