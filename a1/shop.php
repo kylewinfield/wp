@@ -22,7 +22,7 @@
 
   <header>
     <div id="top">
-      <img id="logo" src="../../media/razor.png">
+      <img id="logo" src="../../media/razor.png"alt="sblogo">
       <h1>SECRET BARBER</h1>
     </div>
 </header>

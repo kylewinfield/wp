@@ -21,7 +21,7 @@
 
   <header>
     <div id="top">
-      <img id="logo" src="../../media/razor.png">
+      <img id="logo" src="../../media/razor.png" alt="sblogo">
       <h1>SECRET BARBER</h1>
     </div>
   </header>
@@ -51,16 +51,7 @@
       </section>
 
 
-      <section class="main" , id="customer">
-        <h2>WHAT OUR CUSTOMERS HAVE TO SAY</h2>
-        <div id="quotes">
-          <p>"A great customer service and I'm so happy with my new cut."</p>
-          <p>"Secret Barber is my new go to barber, the staff there are very welcoming and friendly."</p>
-          <p>"These guys were extremely helpful when I needed to change up my look, love the guys there!"</p>
-        </div>
 
-
-      </section>
 
       <section class="main">
         <h2>OPENING HOURS</h2>
@@ -76,6 +67,14 @@
 
       </section>
 
+      <section class="main" , id="customer">
+        <h2>WHAT OUR CUSTOMERS HAVE TO SAY</h2>
+        <div id="quotes">
+          <p>"A great customer service and I'm so happy with my new cut."</p>
+          <p>"Secret Barber is my new go to barber, the staff there are very welcoming and friendly."</p>
+          <p>"These guys were extremely helpful when I needed to change up my look, love the guys there!"</p>
+        </div>
+      </section>
 
     </article>
   </main>

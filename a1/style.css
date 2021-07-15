@@ -5,7 +5,8 @@ header,
 .foot,
 #service,
 #cuts,
-#servicehead
+#servicehead,
+#producthead
 {
     background-color: rgba(0, 0, 0, 0.945);
     color: white;
@@ -21,8 +22,6 @@ header
     margin-bottom: -50px;
     text-align: center;
 }
-
-
 
 h1
 {
@@ -122,6 +121,37 @@ h3
     color:rgb(245, 162, 67)
 }
 
+
+#productcontainer
+{
+    display:inline-block;
+    text-align:center;
+}
+
+#productcontainer p
+{
+    color: white;
+    display:inline-block;
+    width: 600px;
+    margin-left:auto;
+    margin-right:auto;
+    text-align:start;
+    font-size:30px;
+}
+
+#products h3
+{
+    margin-top:100px;
+}
+
+
+#productcontainer img
+{
+    border: 4px solid rgb(252, 170, 77);
+    border-radius: 3px;
+    margin-right:50px;
+}
+
 #radio
 {
     border: 5px solid rgb(245, 162, 67);
@@ -163,11 +193,48 @@ input:checked + label
     padding-right:17px;
 }
 
-button
+.button
 {
-    size:20px;
+    font-size:30px;
+    background-color:black;
+    color:rgb(245, 162, 67);
+    border:3px solid rgb(245, 162, 67);
+    border-radius:6px;
 }
 
+.button:active
+{
+    color:black;
+    background-color:rgb(245, 162, 67);
+}
+
+.button[type="button"]
+{
+    width:40px;
+    height:40px;
+}
+
+.button[type=submit]
+{
+    width:100px;
+    margin-bottom:20px;
+}
+
+input[type=number]
+{
+    font-size:30px;
+    width:80px;
+}
+
+#purchase
+{
+    background:rgba(255, 255, 255, 0.014);
+    padding-top:10px;
+    margin-left:auto;
+    margin-right:auto;
+    border-radius: 10px;
+   
+}
 
 #img1
 {
@@ -181,7 +248,7 @@ button
 
 #cuts
 {
-    background-image: url("../../mediatim-mossholder-q49oU8NeOHQ-unsplash.jpg");
+    background-image: url("tim-mossholder-q49oU8NeOHQ-unsplash.jpg");
     background-attachment: fixed;
     background-position: center;
     background-repeat: no-repeat;
@@ -260,7 +327,7 @@ button
 
 body
 {
-    background-image: url("../../media/agustin-fernandez-Znyjl9pbaUs-unsplash.jpg");
+    background-image: url("agustin-fernandez-Znyjl9pbaUs-unsplash.jpg");
     background-attachment: fixed;
     background-position: center;
     background-repeat: no-repeat;
