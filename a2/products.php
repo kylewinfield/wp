@@ -10,18 +10,19 @@
   <link id='wireframecss' type="text/css" rel="stylesheet" href="../wireframe.css" disabled>
   <link id='stylecss' type="text/css" rel="stylesheet" href="style.css?t=<?= filemtime("style.css"); ?>">
   <script src='../wireframe.js'></script>
+  <script src='script.js'></script>
 
   <link href="https://fonts.googleapis.com/css2?family=Aleo:ital@1&display=swap" rel="stylesheet">
   <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap" rel="stylesheet">
-
-  <?php require_once("tools.php")?>
 
 </head>
 
 <body>
 
-<?php topModule();
-navModule();
+<?php 
+ require_once("tools.php");
+ topModule();
+ navModule();
 ?>
 
   <main>
@@ -65,7 +66,7 @@ navModule();
         <div id="purchase">
         <h3>Select product and quantity for purchase:</h3>
 
-        <form action='https://titan.csit.rmit.edu.au/~e54061/wp/testproduct.php' method='post' target='_blank'>
+        <form action='' method='post' target=''>
           <input type='hidden' name='service' value='products'>
           <section id="radio">
             <input type="radio" id="hairwax" name='variant' value='Hair wax'>
@@ -83,9 +84,9 @@ navModule();
           </section>
           <p>
             Select quantity: 
-            <button class="button" type="button">+</button>
-            <button class="button" type="button">-</button>
-            <input type='number' name='qty' min='1' max='100' required />
+            <button class="button" type="button" onclick="decrementQuantity('product')">-</button>
+            <input type='text' name='qty' id='product' oninput="inputRangeCheck('product')" required>
+            <button class="button" type="button" onclick="incrementQuantity('product')">+</button>
           </p>
 
           <button class="button" type="submit">Buy</button>
@@ -98,7 +99,8 @@ navModule();
     </article>
   </main>
 
-  <?php bottomModule()?>
+  <?php bottomModule();
+  debug();?>
 
 </body>
 

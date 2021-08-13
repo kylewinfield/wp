@@ -220,7 +220,7 @@ input:checked + label
     margin-bottom:20px;
 }
 
-input[type=number]
+input[type=text]
 {
     font-size:30px;
     width:80px;

@@ -14,15 +14,14 @@
   <link href="https://fonts.googleapis.com/css2?family=Aleo:ital@1&display=swap" rel="stylesheet">
   <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap" rel="stylesheet">
 
-  <?php require_once("tools.php")?>
-
-
 </head>
 
 <body>
 <?php 
+ require_once("tools.php");
  topModule();
  navModule();
+ 
 ?>
 
   <main>
@@ -40,8 +39,6 @@
         </p>
 
       </section>
-
-
 
 
       <section class="main">
@@ -70,7 +67,7 @@
     </article>
   </main>
 
-  <?php bottomModule()?>
+  <?php bottomModule();debug();?>
 
 </body>
 

@@ -28,8 +28,8 @@ function navModule(){
     <a href="shop.php">Services</a>
     <a href="#contact"> Contact</a>
   </div>
-</nav>
-<html>
+  </nav>
+  <html>
 OUTPUT;
 echo $html;
 }
@@ -74,6 +74,12 @@ function bottomModule(){
 }
 
 
-
+function debug(){
+  
+   echo "<h3>SESSION contents:</h3>";
+   print_r($_SESSION);
+   echo "<h3>POST contents:</h3>";
+   print_r($_POST);
+}
 
 ?>
