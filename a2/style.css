@@ -1,0 +1,346 @@
+
+nav,
+header,
+.main,
+.foot,
+#service,
+#cuts,
+#servicehead,
+#producthead
+{
+    background-color: rgba(0, 0, 0, 0.945);
+    color: white;
+    font-family: 'Aleo', serif;
+    margin-top: 50px;
+    margin-bottom: 50px;
+    box-shadow: 5px px 10px rgba(0, 0, 0, 0.521);
+    border: 3px solid rgb(245, 162, 67);
+}
+
+header
+{
+    margin-bottom: -50px;
+    text-align: center;
+}
+
+h1
+{
+    font-size: 150px;
+    font-family: 'Bebas Neue';
+    letter-spacing: 8px;
+    line-height:140px;
+    width: 410px;
+    margin-left: auto;
+    margin-right: auto;
+
+}
+
+#top
+{
+    width: 1080px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+#logo
+{
+    float:left;
+}
+
+article h2
+{
+    text-align:center;
+
+}
+
+nav
+{
+    text-align: center;
+    padding: 10px;
+    word-spacing: 5em;
+    background-color: rgb(245, 162, 67);
+}
+
+nav a
+{
+    padding: 10px;
+    border-radius: 10px;
+    font-size: 40px;
+    text-decoration: none;
+
+}
+
+nav a:link, 
+nav a:visited
+{
+    color:rgb(0, 0, 0)
+}
+
+a:hover
+{
+    background-color: rgba(255, 212, 162, 0.473);
+}
+
+#intro,
+#contact
+{
+    font-size: 25px;
+    padding-left: 200px;
+
+}
+
+#intro
+{
+    display:block;
+    
+}
+
+h2
+{
+    font-size: 50px;
+}
+
+h3
+{
+    font-size: 35px;
+    color:rgb(245, 162, 67);
+}
+
+#intro p
+{
+    width: 1300px;
+    padding-bottom: 200px;
+    font-size: 45px;
+}
+
+#hours,
+#products
+{
+    text-align: center;
+    font-size: 35px;
+    color:rgb(245, 162, 67)
+}
+
+
+#productcontainer
+{
+    display:inline-block;
+    text-align:center;
+}
+
+#productcontainer p
+{
+    color: white;
+    display:inline-block;
+    width: 600px;
+    margin-left:auto;
+    margin-right:auto;
+    text-align:start;
+    font-size:30px;
+}
+
+#products h3
+{
+    margin-top:100px;
+}
+
+
+#productcontainer img
+{
+    border: 4px solid rgb(252, 170, 77);
+    border-radius: 3px;
+    margin-right:50px;
+}
+
+#radio
+{
+    border: 5px solid rgb(245, 162, 67);
+    border-radius: 10px;
+    width:578px;
+    margin-top:10px;
+    margin-left:auto;
+    margin-right:auto;
+    text-align:right;
+}
+
+#radio input
+{
+    position:fixed;
+    opacity:0;
+    height:0;
+    width:0;
+    top: 0;
+    left:0;
+    margin:0;
+    padding:0;
+}
+
+input:checked + label
+{
+    color:rgb(0, 0, 0);
+    background-color:rgb(245, 162, 67);
+    padding-top:10px;
+    padding-bottom:10px;
+}
+
+#radio p
+{
+    
+    margin-top:5px;
+    margin-bottom:5px;
+    display:inline-block;
+    padding-left:5px;
+    padding-right:17px;
+}
+
+.button
+{
+    font-size:30px;
+    background-color:black;
+    color:rgb(245, 162, 67);
+    border:3px solid rgb(245, 162, 67);
+    border-radius:6px;
+}
+
+.button:active
+{
+    color:black;
+    background-color:rgb(245, 162, 67);
+}
+
+.button[type="button"]
+{
+    width:40px;
+    height:40px;
+}
+
+.button[type=submit]
+{
+    width:100px;
+    margin-bottom:20px;
+}
+
+input[type=number]
+{
+    font-size:30px;
+    width:80px;
+}
+
+#purchase
+{
+    background:rgba(255, 255, 255, 0.014);
+    padding-top:10px;
+    margin-left:auto;
+    margin-right:auto;
+    border-radius: 10px;
+   
+}
+
+#img1
+{
+    border: 3px solid rgb(252, 170, 77);
+    float:left;
+    margin-right: 20px;
+    margin-left: 30px;
+    border-radius: 3px;
+}
+
+
+#cuts
+{
+    background-image: url("../../media/tim-mossholder-q49oU8NeOHQ-unsplash.jpg");
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size:cover;
+    display: block;
+    font-size: 25px;
+
+}
+
+.imgIcon
+{
+    filter:invert(100%);
+}
+
+#cuts img
+{
+    margin-right: 20px;
+    margin-bottom: 40px;
+    float:left;
+}
+
+
+
+#everycut
+{
+    background-color:rgba(0, 0, 0, 0.308);
+    border-radius: 20px;
+    text-align:left;
+    width:800px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+#everycut a,
+#everycut a:link,
+#everycut a:visited
+{
+    color:white;
+    text-decoration: none;
+}
+
+.cutsdivide
+{
+    
+    margin-left: auto;
+    margin-right: auto;
+    width: 600px;
+
+}
+
+
+.cutsdivide:hover
+{
+    background-color:rgba(255, 255, 255, 0.26);
+    border-radius: 10px;
+}
+
+
+
+#quotes
+{
+    font-size: 25px;
+    text-align: center;
+}
+
+#quotes p
+{
+    display:inline-block;
+    text-align: left;
+    width: 300px;
+    margin-right: 100px;
+    margin-left: 100px;
+
+}
+
+body
+{
+    background-image: url("../../media/agustin-fernandez-Znyjl9pbaUs-unsplash.jpg");
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+#disclaimer
+{
+    font-size: 15px;
+}
+
+#email,
+#phone
+{
+    filter: invert(100%);
+    padding-right:10px;
+}
