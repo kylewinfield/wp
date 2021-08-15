@@ -100,7 +100,6 @@ function bottomModule(){
   
 }
 
-
 function debug(){
   
    echo "<div id='debug'><p>SESSION contents: <br>";

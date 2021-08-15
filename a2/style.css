@@ -165,9 +165,18 @@ h3
 
 #combRadio
 {
-    width: 593px;
+    width: 600px;
 }
 
+#trimRadio
+{
+    width: 452px;
+}
+
+#razorRadio
+{
+    width: 376px;
+}
 
 .radio input
 {

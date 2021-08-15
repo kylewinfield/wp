@@ -31,14 +31,14 @@
               
           </div>
         </a>
-        <a href="products.php?item=shaver">
+        <a href="products.php?item=trimmer">
           <div class="cutsdivide">
             <img class="imgIcon" src="../../media/3615156.png" alt="shaver" width="150" height="150">
             
-              <h3>Shavers</h3>
+              <h3>Trimmers</h3>
               <p>
-                Trimming up has never been easier with our precise and quick shavers, designed for ease of use 
-                and perfect for travelling.
+                Trimming up has never been easier with our precise and quick shavers, easy to use 
+                and perfect for everyday use.
               </p>
             
           </div>

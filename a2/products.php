@@ -8,6 +8,8 @@
  navModule();
  
  if ($_GET['item'] == 'comb'){
+  $getData = $_GET['item'];
+  $getKey = array_key_first($_GET);
   $html = <<<"OUTPUT"
   <!DOCTYPE HTML>
   <html>
@@ -42,7 +44,7 @@
            <h3>Wide-tooth comb</h3><img src="../../media/widecomb.png" alt="wide-tooth hair comb">
            <p>
             Comb with teeth spaced widely, ideal for use with thicker hair or getting the tangles out
-            of your hair. Material description?
+            of your hair. 
             <br><br><br>
              Price: $20
            </p>
@@ -53,26 +55,26 @@
         <h3>Select cut and quantity for purchase:</h3>
 
         <form action='' method='post' target=''>
-          <input type='hidden' name='service' value='combs'>
+          <input type='hidden' name='$getKey' value="$getData" required>
           <section class="radio", id="combRadio">
-            <input type="radio" id="allpurpose" name='variant' value='All purpose'>
+            <input type="radio" id="allpurpose" name='variant' value='allpurpose'>
             <label for="allpurpose">
-              <p>All-purpose</p>
+              <p>All- purpose</p>
             </label>
-            <input type="radio" id="finetooth" name='variant' value='Fine-tooth'>
+            <input type="radio" id="finetooth" name='variant' value='finetooth'>
             <label for="finetooth">
               <p>Fine-tooth</p>
             </label>
-            <input type="radio" id="widetooth" name='variant' value='Wide-tooth'>
+            <input type="radio" id="widetooth" name='variant' value='widetooth'>
             <label for="widetooth">
               <p>Wide-tooth</p>
             </label>
           </section>
           <p>
             Select quantity: 
-            <button class="button" type="button" onclick="decrementQuantity('product')">-</button>
-            <input type='text' name='qty' id='product' oninput="inputRangeCheck('product')" required>
-            <button class="button" type="button" onclick="incrementQuantity('product')">+</button>
+            <button class="button" type="button" onclick="decrementQuantity('$getData')">-</button>
+            <input type='text' name='qty' id='$getData' oninput="inputRangeCheck('$getData')" required>
+            <button class="button" type="button" onclick="incrementQuantity('$getData')">+</button>
           </p>
 
           <button class="button" type="submit">Buy</button>
@@ -89,13 +91,162 @@
   echo $html;
 
 }
-else if($_GET['item'] == 'shaver'){
+else if($_GET['item'] == 'trimmer'){
 
+  $getData = $_GET['item'];
+  $getKey = array_key_first($_GET);
+  $html = <<<"OUTPUT"
+  <!DOCTYPE HTML>
+  <html>
+  <main>
+    <article>
+
+      <div id="producthead">
+        <h2>Trimmers</h2>
+      </div>
+
+      <section class="main" , id="products">
+
+        <div id="productcontainer">
+
+           <h3>Multigroom Trimmer</h3><img src="../../media/trimmer.png" alt="Multigroom Trimmer">
+           <p>
+             A professional trimmer that offers precision, durability and performance. Comes with 10 guide combs,
+             charger and storage pouch. A must-have kit for anyone maintaining their facial hair.
+             <br><br><br>
+             Price: $150
+           </p>
+      
+
+           <h3>Stubble trimmer</h3><img src="../../media/stubletrim.png" alt="Struble trimmer">
+            <p>
+             A great trimmer to keep your face clean from stuble. This stuble trimmer is lightweight and
+             easy to run over your face first thing in the morning.
+             <br><br><br><br>
+             Price: $80 
+            </p>
+            
+           
+           <h3>Travel trimmer</h3><img src="../../media/traveltrim.png" alt="Travel trimmer">
+           <p>
+            The perfect travel companion to keep you looking sharp while you're on the go.
+            <br><br><br><br><br>
+             Price: $35
+           </p>
+      
+        </div>
+        
+        <div id="purchase">
+        <h3>Select product and quantity for purchase:</h3>
+
+        <form action='' method='post' target=''>
+          <input type='hidden' name='$getKey' value="$getData" required>
+          <section class="radio", id="trimRadio">
+            <input type="radio" id="multigroom" name='variant' value='multigroom'>
+            <label for="multigroom">
+              <p>Multigroom</p>
+            </label>
+            <input type="radio" id="stuble" name='variant' value='stuble'>
+            <label for="stuble">
+              <p>Stuble</p>
+            </label>
+            <input type="radio" id="travel" name='variant' value='travel'>
+            <label for="travel">
+              <p>Travel</p>
+            </label>
+          </section>
+          <p>
+            Select quantity: 
+            <button class="button" type="button" onclick="decrementQuantity('$getData')">-</button>
+            <input type='text' name='qty' id='$getData' oninput="inputRangeCheck('$getData')" required>
+            <button class="button" type="button" onclick="incrementQuantity('$getData')">+</button>
+          </p>
+
+          <button class="button" type="submit">Buy</button>
+        </form>
+
+      </div>
+
+      </section>
+
+    </article>
+  </main>
+  </html>
+  OUTPUT;
+  echo $html;
 }
 else if($_GET['item'] == 'razor'){
 
+  $getData = $_GET['item'];
+  $getKey = array_key_first($_GET);
+  $html = <<<"OUTPUT"
+  <!DOCTYPE HTML>
+  <html>
+  <main>
+    <article>
+
+      <div id="producthead">
+        <h2>Razors</h2>
+      </div>
+
+      <section class="main" , id="products">
+
+        <div id="productcontainer">
+
+           <h3>Straight Razor</h3><img src="../../media/straightrazor.png" alt="Straight razor">
+           <p>
+             This razor features a polished handle with a 3/9" stainless steel blade. It is a professional grade straight
+             razor with a hardened blade for the ultimate shaving experience.
+             Comes in either Black, wooden or silver handle.
+             <br><br><br>
+             Price: $120
+           </p>
+      
+        </div>
+        
+        <div id="purchase">
+        <h3>Select product and quantity for purchase:</h3>
+
+        <form action='' method='post' target=''>
+          <input type='hidden' name='$getKey' value="$getData" required>
+          <section class="radio", id="razorRadio">
+            <input type="radio" id="black" name='variant' value='black'>
+            <label for="black">
+              <p>Black</p>
+            </label>
+            <input type="radio" id="wooden" name='variant' value='wooden'>
+            <label for="wooden">
+              <p>Wooden</p>
+            </label>
+            <input type="radio" id="silver" name='variant' value='silver'>
+            <label for="silver">
+              <p>Silver</p>
+            </label>
+          </section>
+          <p>
+            Select quantity: 
+            <button class="button" type="button" onclick="decrementQuantity('$getData')">-</button>
+            <input type='text' name='qty' id='$getData' oninput="inputRangeCheck('$getData')" required>
+            <button class="button" type="button" onclick="incrementQuantity('$getData')">+</button>
+          </p>
+
+          <button class="button" type="submit">Buy</button>
+        </form>
+
+      </div>
+
+      </section>
+
+    </article>
+  </main>
+  </html>
+  OUTPUT;
+  echo $html;
+
 }
 else if ($_GET['item'] == 'product'){
+  $getData = $_GET['item'];
+  $getKey = array_key_first($_GET);
   $html = <<<"OUTPUT"
   <!DOCTYPE HTML>
   <html>
@@ -141,26 +292,26 @@ else if ($_GET['item'] == 'product'){
         <h3>Select product and quantity for purchase:</h3>
 
         <form action='' method='post' target=''>
-          <input type='hidden' name='service' value='products'>
+          <input type='hidden' name='$getKey' value="$getData">
           <section class="radio">
-            <input type="radio" id="hairwax" name='variant' value='Hair wax'>
+            <input type="radio" id="hairwax" name='variant' value='hairwax'>
             <label for="hairwax">
               <p>Hair wax</p>
             </label>
-            <input type="radio" id="shavingcream" name='variant' value='Shaving cream'>
+            <input type="radio" id="shavingcream" name='variant' value='shavingcream'>
             <label for="shavingcream">
               <p>Shaving cream</p>
             </label>
-            <input type="radio" id="beardoil" name='variant' value='Beard Oil'>
+            <input type="radio" id="beardoil" name='variant' value='beardoil'>
             <label for="beardoil">
               <p>Beard oil</p>
             </label>
           </section>
           <p>
             Select quantity: 
-            <button class="button" type="button" onclick="decrementQuantity('product')">-</button>
-            <input type='text' name='qty' id='product' oninput="inputRangeCheck('product')" required>
-            <button class="button" type="button" onclick="incrementQuantity('product')">+</button>
+            <button class="button" type="button" onclick="decrementQuantity('$getData')">-</button>
+            <input type='text' name='qty' id='$getData' oninput="inputRangeCheck('$getData')" required>
+            <button class="button" type="button" onclick="incrementQuantity('$getData')">+</button>
           </p>
 
           <button class="button" type="submit">Buy</button>
