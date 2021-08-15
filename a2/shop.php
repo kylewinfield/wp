@@ -18,7 +18,7 @@
 
         <div id="everycut">
 
-        <a href="products.php?service=comb">
+        <a href="products.php?item=comb">
           <div class="cutsdivide">
             <img class="imgIcon" src="../../media/2303249.png" alt="Comb" width="150" height="150">
             

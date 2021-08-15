@@ -7,7 +7,7 @@
  topModule();
  navModule();
  
- if ($_GET['item'] == 'haircut'){
+ if ($_GET['item'] == 'comb'){
   $html = <<<"OUTPUT"
   <!DOCTYPE HTML>
   <html>
@@ -15,26 +15,36 @@
     <article>
 
       <div id="producthead">
-        <h2>Haircuts</h2>
+        <h2>Combs</h2>
       </div>
 
       <section class="main" , id="products">
 
         <div id="productcontainer">
 
-           <h3>Standard cut</h3><img src="../../media/hairwax.jpg" alt="hair wax">
+           <h3>All-purpose Comb</h3><img src="../../media/allpurposecomb.png" alt="Hair comb">
            <p>
-             
+             The 'one-size fits all' approach to combs. Combines a fine-tooth and wide-tooth
+             comb into one on each side. If there's no comb in your home this is what you need.
+             <br><br><br>
+             Price: $20
            </p>
+      
 
-           <h3>Buzz cut</h3><img src="../../media/shavingcream.jpg" alt="shaving cream">
+           <h3>Fine-tooth comb</h3><img src="../../media/finecomb.png" alt="fine-tooth hair comb">
             <p>
-             
+             Comb with teeth spaced close together, ideal for use with thin hair.
+             <br><br><br>
+             Price: $20 
             </p>
-           
-           <h3>Full re-style</h3><img src="../../media/beardoil.jpg" alt="beard oil">
-           <p>
             
+           
+           <h3>Wide-tooth comb</h3><img src="../../media/widecomb.png" alt="wide-tooth hair comb">
+           <p>
+            Comb with teeth spaced widely, ideal for use with thicker hair or getting the tangles out
+            of your hair. Material description?
+            <br><br><br>
+             Price: $20
            </p>
       
         </div>
@@ -43,19 +53,19 @@
         <h3>Select cut and quantity for purchase:</h3>
 
         <form action='' method='post' target=''>
-          <input type='hidden' name='service' value='products'>
-          <section class="radio", id="hairRadio">
-            <input type="radio" id="standard" name='variant' value='Standard Cut'>
-            <label for="standard">
-              <p id='pillStandard'>Standard cut</p>
+          <input type='hidden' name='service' value='combs'>
+          <section class="radio", id="combRadio">
+            <input type="radio" id="allpurpose" name='variant' value='All purpose'>
+            <label for="allpurpose">
+              <p>All-purpose</p>
             </label>
-            <input type="radio" id="buzzcut" name='variant' value='Buzz Cut'>
-            <label for="buzzcut">
-              <p>Buzz cut</p>
+            <input type="radio" id="finetooth" name='variant' value='Fine-tooth'>
+            <label for="finetooth">
+              <p>Fine-tooth</p>
             </label>
-            <input type="radio" id="fullrestyle" name='variant' value='Full re-style'>
-            <label for="fullrestyle">
-              <p>Full re-style</p>
+            <input type="radio" id="widetooth" name='variant' value='Wide-tooth'>
+            <label for="widetooth">
+              <p>Wide-tooth</p>
             </label>
           </section>
           <p>
