@@ -1,0 +1,13 @@
+item,variant,price
+comb,allpurpose,20
+comb,finetooth,16
+comb,widetooth,13
+trimmer,multigroom,150
+trimmer,stubble,80
+trimmer,travel,35
+razor,black,120
+razor,wood,120
+razor,silver,120
+product,hairwax,25
+product,shavingcream,12
+product,beardoil,20

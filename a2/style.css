@@ -233,7 +233,7 @@ input:checked + label
 
 .button[type=submit]
 {
-    width:100px;
+    width:180px;
     margin-bottom:20px;
 }
 

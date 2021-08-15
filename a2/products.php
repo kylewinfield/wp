@@ -6,6 +6,9 @@
  headModule();
  topModule();
  navModule();
+
+$prices = readPrices();
+
  
  if ($_GET['item'] == 'comb'){
   $getData = $_GET['item'];
@@ -37,7 +40,7 @@
             <p>
              Comb with teeth spaced close together, ideal for use with thin hair.
              <br><br><br>
-             Price: $20 
+             Price: $16
             </p>
             
            
@@ -46,7 +49,7 @@
             Comb with teeth spaced widely, ideal for use with thicker hair or getting the tangles out
             of your hair. 
             <br><br><br>
-             Price: $20
+             Price: $13
            </p>
       
         </div>
@@ -77,7 +80,7 @@
             <button class="button" type="button" onclick="incrementQuantity('$getData')">+</button>
           </p>
 
-          <button class="button" type="submit">Buy</button>
+          <button class="button" type="submit">Add to cart</button>
         </form>
 
       </div>
@@ -162,7 +165,7 @@ else if($_GET['item'] == 'trimmer'){
             <button class="button" type="button" onclick="incrementQuantity('$getData')">+</button>
           </p>
 
-          <button class="button" type="submit">Buy</button>
+          <button class="button" type="submit">Add to cart</button>
         </form>
 
       </div>
@@ -230,7 +233,7 @@ else if($_GET['item'] == 'razor'){
             <button class="button" type="button" onclick="incrementQuantity('$getData')">+</button>
           </p>
 
-          <button class="button" type="submit">Buy</button>
+          <button class="button" type="submit">Add to cart</button>
         </form>
 
       </div>
@@ -247,6 +250,7 @@ else if($_GET['item'] == 'razor'){
 else if ($_GET['item'] == 'product'){
   $getData = $_GET['item'];
   $getKey = array_key_first($_GET);
+
   $html = <<<"OUTPUT"
   <!DOCTYPE HTML>
   <html>
@@ -268,6 +272,8 @@ else if ($_GET['item'] == 'product'){
              Makes hair emphasized not causing any oily look thanks to its structure containing wax. 
              A very scientific mix of essences defies the human understanding of scent. 
              Easy to apply thanks to its creamy structure.
+             <br>
+             Price: $25
            </p>
 
            <h3>Barbasol Shaving Cream</h3><img src="../../media/shavingcream.jpg" alt="shaving cream">
@@ -276,6 +282,8 @@ else if ($_GET['item'] == 'product'){
              tradition in shaving for nearly 100 years. The premium Close Shave® formula, 
              with quality ingredients, produces a rich, thick lather and exceptional razor glide. 
              Barbasol Shaving Cream gives you the confidence that comes from a close, comfortable shave.
+             <br>
+             Price: $12
             </p>
            
            <h3>Proraso Beard Oil</h3><img src="../../media/beardoil.jpg" alt="beard oil">
@@ -284,6 +292,8 @@ else if ($_GET['item'] == 'product'){
             while lightly hydrating the skin underneath to prevent dryness and flakiness. 
             The Proraso Wood & Spice Beard Oil refreshes, moisturises, and protects using natural ingredients 
             like Macademia Oil to promote healthy beard growth and prevent breakages.
+            <br>
+            Price: $20
            </p>
       
         </div>
@@ -314,7 +324,7 @@ else if ($_GET['item'] == 'product'){
             <button class="button" type="button" onclick="incrementQuantity('$getData')">+</button>
           </p>
 
-          <button class="button" type="submit">Buy</button>
+          <button class="button" type="submit">Add to cart</button>
         </form>
 
       </div>
@@ -330,13 +340,8 @@ else if ($_GET['item'] == 'product'){
 else {
   header("Location: shop.php");
 };
-?>
-
-  
-
-<?php 
   bottomModule();
   debug();
-  ?>
+ ?>
 
 </html>

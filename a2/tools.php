@@ -100,6 +100,7 @@ function bottomModule(){
   
 }
 
+
 function debug(){
   
    echo "<div id='debug'><p>SESSION contents: <br>";
@@ -108,5 +109,25 @@ function debug(){
    print_r($_POST);
    echo "</p></div>";
 }
+
+function readPrices(){
+
+  $filename = "prices.txt";
+ 
+    if( ($fp = fopen($filename,'r')) && flock($fp, LOCK_SH) ) {
+      if (($headings = fgetcsv($fp, 0, ",")) !== false) {
+        while ( $cells = fgetcsv($fp, 0, ",") ) {
+          for ($x=1; $x<count($cells); $x++)
+            $priceData[$cells[0]][$cells[1]]=$cells[$x];
+        }
+      }
+      flock($fp, LOCK_UN);
+      fclose($fp);
+      return $priceData;
+  }
+     
+  
+  }
+
 
 ?>
