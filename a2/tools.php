@@ -15,8 +15,9 @@ function headModule(){
 
   <!-- Keep wireframe.css for debugging, add your css to style.css -->
   <link id='wireframecss' type="text/css" rel="stylesheet" href="../wireframe.css" disabled>
-  <link id='stylecss' type="text/css" rel="stylesheet" href="style.css?t=<?= filemtime("style.css"); ?>">
+  <link id='stylecss' type="text/css" rel="stylesheet" href="style.css?t=<?= filemtime('style.css'); ?>">
   <script src='../wireframe.js'></script>
+  <script src='script.js'></script>
 
   <link href="https://fonts.googleapis.com/css2?family=Aleo:ital@1&display=swap" rel="stylesheet">
   <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap" rel="stylesheet">
@@ -50,7 +51,7 @@ function navModule(){
   <nav>
   <div>
     <a href="index.php">Home</a>
-    <a href="shop.php">Services</a>
+    <a href="shop.php">Shop</a>
     <a href="#contact"> Contact</a>
   </div>
   </nav>

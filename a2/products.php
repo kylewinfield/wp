@@ -3,16 +3,14 @@
 
 <?php 
  require_once("tools.php");
- if(!isset($_SESSION)) 
- { 
-     session_start(); 
- }
  headModule();
  topModule();
  navModule();
  
- if ($_GET['service'] == 'haircut'){
+ if ($_GET['item'] == 'haircut'){
   $html = <<<"OUTPUT"
+  <!DOCTYPE HTML>
+  <html>
   <main>
     <article>
 
@@ -76,18 +74,21 @@
 
     </article>
   </main>
+  </html>
   OUTPUT;
   echo $html;
 
 }
-else if($_GET['service'] == 'fade'){
+else if($_GET['item'] == 'shaver'){
 
 }
-else if($_GET['service'] == 'shave'){
+else if($_GET['item'] == 'razor'){
 
 }
-else if ($_GET['service'] == 'product'){
+else if ($_GET['item'] == 'product'){
   $html = <<<"OUTPUT"
+  <!DOCTYPE HTML>
+  <html>
   <main>
     <article>
 
@@ -161,6 +162,7 @@ else if ($_GET['service'] == 'product'){
 
     </article>
   </main>
+  </html>
   OUTPUT;
   echo $html;
 }

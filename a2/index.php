@@ -3,10 +3,6 @@
 
 <?php 
  require_once("tools.php");
- if(!isset($_SESSION)) 
- { 
-     session_start(); 
- }
  headModule();
  topModule();
  navModule();
@@ -50,7 +46,7 @@
           <p>"These guys were extremely helpful when I needed to change up my look, love the guys there!"</p>
         </div>
       </section>
-      
+
     </article>
 
   <?php 
