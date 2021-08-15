@@ -1,30 +1,93 @@
 <!DOCTYPE html>
 <html lang='en'>
 
-<head>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Assignment 2</title>
-
-  <!-- Keep wireframe.css for debugging, add your css to style.css -->
-  <link id='wireframecss' type="text/css" rel="stylesheet" href="../wireframe.css" disabled>
-  <link id='stylecss' type="text/css" rel="stylesheet" href="style.css?t=<?= filemtime("style.css"); ?>">
-  <script src='../wireframe.js'></script>
-  <script src='script.js'></script>
-
-  <link href="https://fonts.googleapis.com/css2?family=Aleo:ital@1&display=swap" rel="stylesheet">
-  <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap" rel="stylesheet">
-
-</head>
-
-<body>
-
 <?php 
  require_once("tools.php");
+ if(!isset($_SESSION)) 
+ { 
+     session_start(); 
+ }
+ headModule();
  topModule();
  navModule();
-?>
+ 
+ if ($_GET['service'] == 'haircut'){
+  $html = <<<"OUTPUT"
+  <main>
+    <article>
 
+      <div id="producthead">
+        <h2>Haircuts</h2>
+      </div>
+
+      <section class="main" , id="products">
+
+        <div id="productcontainer">
+
+           <h3>Standard cut</h3><img src="../../media/hairwax.jpg" alt="hair wax">
+           <p>
+             
+           </p>
+
+           <h3>Buzz cut</h3><img src="../../media/shavingcream.jpg" alt="shaving cream">
+            <p>
+             
+            </p>
+           
+           <h3>Full re-style</h3><img src="../../media/beardoil.jpg" alt="beard oil">
+           <p>
+            
+           </p>
+      
+        </div>
+        
+        <div id="purchase">
+        <h3>Select cut and quantity for purchase:</h3>
+
+        <form action='' method='post' target=''>
+          <input type='hidden' name='service' value='products'>
+          <section class="radio", id="hairRadio">
+            <input type="radio" id="standard" name='variant' value='Standard Cut'>
+            <label for="standard">
+              <p id='pillStandard'>Standard cut</p>
+            </label>
+            <input type="radio" id="buzzcut" name='variant' value='Buzz Cut'>
+            <label for="buzzcut">
+              <p>Buzz cut</p>
+            </label>
+            <input type="radio" id="fullrestyle" name='variant' value='Full re-style'>
+            <label for="fullrestyle">
+              <p>Full re-style</p>
+            </label>
+          </section>
+          <p>
+            Select quantity: 
+            <button class="button" type="button" onclick="decrementQuantity('product')">-</button>
+            <input type='text' name='qty' id='product' oninput="inputRangeCheck('product')" required>
+            <button class="button" type="button" onclick="incrementQuantity('product')">+</button>
+          </p>
+
+          <button class="button" type="submit">Buy</button>
+        </form>
+
+      </div>
+
+      </section>
+
+    </article>
+  </main>
+  OUTPUT;
+  echo $html;
+
+}
+else if($_GET['service'] == 'fade'){
+
+}
+else if($_GET['service'] == 'shave'){
+
+}
+else if ($_GET['service'] == 'product'){
+  $html = <<<"OUTPUT"
   <main>
     <article>
 
@@ -68,7 +131,7 @@
 
         <form action='' method='post' target=''>
           <input type='hidden' name='service' value='products'>
-          <section id="radio">
+          <section class="radio">
             <input type="radio" id="hairwax" name='variant' value='Hair wax'>
             <label for="hairwax">
               <p>Hair wax</p>
@@ -98,10 +161,19 @@
 
     </article>
   </main>
+  OUTPUT;
+  echo $html;
+}
+else {
+  header("Location: shop.php");
+};
+?>
 
-  <?php bottomModule();
-  debug();?>
+  
 
-</body>
+<?php 
+  bottomModule();
+  debug();
+  ?>
 
 </html>

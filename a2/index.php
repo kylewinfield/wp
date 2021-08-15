@@ -1,30 +1,17 @@
 <!DOCTYPE html>
 <html lang='en'>
 
-<head>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Assignment 2</title>
-
-  <!-- Keep wireframe.css for debugging, add your css to style.css -->
-  <link id='wireframecss' type="text/css" rel="stylesheet" href="../wireframe.css" disabled>
-  <link id='stylecss' type="text/css" rel="stylesheet" href="style.css?t=<?= filemtime("style.css"); ?>">
-  <script src='../wireframe.js'></script>
-
-  <link href="https://fonts.googleapis.com/css2?family=Aleo:ital@1&display=swap" rel="stylesheet">
-  <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap" rel="stylesheet">
-
-</head>
-
-<body>
 <?php 
  require_once("tools.php");
+ if(!isset($_SESSION)) 
+ { 
+     session_start(); 
+ }
+ headModule();
  topModule();
  navModule();
- 
 ?>
 
-  <main>
     <article>
       <section class="main" , id="intro">
 
@@ -63,12 +50,14 @@
           <p>"These guys were extremely helpful when I needed to change up my look, love the guys there!"</p>
         </div>
       </section>
-
+      
     </article>
-  </main>
 
-  <?php bottomModule();debug();?>
+  <?php 
+  bottomModule();
+  debug();
+  ?>
 
-</body>
+
 
 </html>

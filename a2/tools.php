@@ -3,10 +3,35 @@
 
 // Put your PHP functions and modules here
 
+
+function headModule(){
+  $html = <<<"OUTPUT"
+  <!DOCTYPE HTML>
+  <html>
+  <head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Assignment 2</title>
+
+  <!-- Keep wireframe.css for debugging, add your css to style.css -->
+  <link id='wireframecss' type="text/css" rel="stylesheet" href="../wireframe.css" disabled>
+  <link id='stylecss' type="text/css" rel="stylesheet" href="style.css?t=<?= filemtime("style.css"); ?>">
+  <script src='../wireframe.js'></script>
+
+  <link href="https://fonts.googleapis.com/css2?family=Aleo:ital@1&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap" rel="stylesheet">
+
+ </head>
+ </html>
+ OUTPUT;
+ echo $html;
+}
+
 function topModule(){
   $html = <<<"OUTPUT"
   <!DOCTYPE html>
   <html>
+  <body>
   <header>
     <div id="top">
       <img id="logo" src="../../media/razor.png" alt="sblogo">
@@ -30,8 +55,8 @@ function navModule(){
   </div>
   </nav>
   <html>
-OUTPUT;
-echo $html;
+ OUTPUT;
+ echo $html;
 }
 
 function dateGen(){
@@ -45,6 +70,7 @@ function bottomModule(){
  $html = <<<"OUTPUT"
     <!DOCTYPE HTML>
     <html>
+    </body>
     <footer>
 
     <section class="foot" , id="contact">
@@ -76,10 +102,11 @@ function bottomModule(){
 
 function debug(){
   
-   echo "<h3>SESSION contents:</h3>";
+   echo "<div id='debug'><p>SESSION contents: <br>";
    print_r($_SESSION);
-   echo "<h3>POST contents:</h3>";
+   echo "</p><p>POST contents: <br>";
    print_r($_POST);
+   echo "</p></div>";
 }
 
 ?>

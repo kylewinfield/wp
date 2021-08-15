@@ -1,27 +1,16 @@
 <!DOCTYPE html>
 <html lang='en'>
 
-<head>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Assignment 2</title>
-
-  <!-- Keep wireframe.css for debugging, add your css to style.css -->
-  <link id='wireframecss' type="text/css" rel="stylesheet" href="../wireframe.css" disabled>
-  <link id='stylecss' type="text/css" rel="stylesheet" href="style.css?t=<?= filemtime("style.css"); ?>">
-  <script src='../wireframe.js'></script>
-
-  <link href="https://fonts.googleapis.com/css2?family=Aleo:ital@1&display=swap" rel="stylesheet">
-  <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap" rel="stylesheet">
-
-</head>
-
-<body>
-
 <?php 
  require_once("tools.php");
+ if(!isset($_SESSION)) 
+ { 
+     session_start(); 
+ }
+ headModule();
  topModule();
  navModule();
+ 
 ?>
 
   <main>
@@ -33,6 +22,7 @@
 
         <div id="everycut">
 
+        <a href="products.php?service=haircut">
           <div class="cutsdivide">
             <img class="imgIcon" src="../../media/1930.png" alt="Scissors" width="150" height="150">
             
@@ -42,8 +32,10 @@
                 professionals has you covered.
               </p>
 
-    
+              
           </div>
+        </a>
+        <a href="products.php?service=fade">
           <div class="cutsdivide">
             <img class="imgIcon" src="../../media/3615156.png" alt="razor" width="150" height="150">
             
@@ -54,7 +46,9 @@
               </p>
             
           </div>
-          <div class="cutsdivide">
+        </a>
+          <a href="products.php?service=shave">
+           <div class="cutsdivide">
              <img class="imgIcon" src="../../media/40648.png" alt="razor" width="150" height="170"> 
                         
               <h3>Shave</h3>
@@ -63,8 +57,9 @@
                 let the professionals handle it for you while you kick back and relax.
               </p>
             
-          </div>
-          <a href="products.php">
+           </div>
+            </a>
+          <a href="products.php?service=product">
           <div class="cutsdivide", id="product">
             <img class="imgIcon" src="../../media/1122840.png" alt="hair product" width="150" height="150">
             
@@ -81,8 +76,9 @@
     </article>
   </main>
 
-  <?php bottomModule()?>
-
-</body>
+  <?php 
+  bottomModule();
+  debug();
+  ?>
 
 </html>
