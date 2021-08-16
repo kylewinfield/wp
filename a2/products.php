@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <html lang='en'>
 
+
 <?php 
  require_once("tools.php");
  headModule();
@@ -8,16 +9,24 @@
  navModule();
 
 $prices = readPrices();
+//use json_encode($prices); to get JS version of prices.
+// SEPERATED BY "", IF PARAMTER USE ''
+print_r(json_encode($prices));
 
+//'pill' radio selection boxes need to be required still
  
  if ($_GET['item'] == 'comb'){
-  $getData = $_GET['item'];
+  $item = $_GET['item'];
   $getKey = array_key_first($_GET);
-  $html = <<<"OUTPUT"
+
+  ?>
+
   <!DOCTYPE HTML>
   <html>
   <main>
-    <article>
+   
+
+     <article>
 
       <div id="producthead">
         <h2>Combs</h2>
@@ -32,7 +41,7 @@ $prices = readPrices();
              The 'one-size fits all' approach to combs. Combines a fine-tooth and wide-tooth
              comb into one on each side. If there's no comb in your home this is what you need.
              <br><br><br>
-             Price: $20
+             Price: $ <?php echo $prices[$item]['allpurpose']; ?>
            </p>
       
 
@@ -40,7 +49,7 @@ $prices = readPrices();
             <p>
              Comb with teeth spaced close together, ideal for use with thin hair.
              <br><br><br>
-             Price: $16
+             Price: $ <?php echo $prices[$item]['finetooth']; ?>
             </p>
             
            
@@ -49,7 +58,7 @@ $prices = readPrices();
             Comb with teeth spaced widely, ideal for use with thicker hair or getting the tangles out
             of your hair. 
             <br><br><br>
-             Price: $13
+             Price: $ <?php echo $prices[$item]['widetooth']; ?>
            </p>
       
         </div>
@@ -57,8 +66,8 @@ $prices = readPrices();
         <div id="purchase">
         <h3>Select cut and quantity for purchase:</h3>
 
-        <form action='' method='post' target=''>
-          <input type='hidden' name='$getKey' value="$getData" required>
+        <form action='' method='post'>
+          <input type='hidden' name='<?php echo $getKey?>' value="<?php echo $item?>" required> 
           <section class="radio", id="combRadio">
             <input type="radio" id="allpurpose" name='variant' value='allpurpose'>
             <label for="allpurpose">
@@ -75,14 +84,14 @@ $prices = readPrices();
           </section>
           <p>
             Select quantity: 
-            <button class="button" type="button" onclick="decrementQuantity('$getData')">-</button>
-            <input type='text' name='qty' id='$getData' oninput="inputRangeCheck('$getData')" required>
-            <button class="button" type="button" onclick="incrementQuantity('$getData')">+</button>
+            <button class="button" type="button" onclick="decrementQuantity('<?php echo $item?>')">-</button>
+            <input type='text' name='qty' id='<?php echo $item?>' oninput='inputRangeCheck("<?php echo $item?>", <?php echo json_encode($prices);?> )' required>
+            <button class="button" type="button" onclick="incrementQuantity('<?php echo $item?>')">+</button>
           </p>
-
+          
           <button class="button" type="submit">Add to cart</button>
+          
         </form>
-
       </div>
 
       </section>
@@ -90,15 +99,14 @@ $prices = readPrices();
     </article>
   </main>
   </html>
-  OUTPUT;
-  echo $html;
-
+  <?php  
 }
 else if($_GET['item'] == 'trimmer'){
 
-  $getData = $_GET['item'];
+  $item = $_GET['item'];
   $getKey = array_key_first($_GET);
-  $html = <<<"OUTPUT"
+
+  ?>
   <!DOCTYPE HTML>
   <html>
   <main>
@@ -117,7 +125,7 @@ else if($_GET['item'] == 'trimmer'){
              A professional trimmer that offers precision, durability and performance. Comes with 10 guide combs,
              charger and storage pouch. A must-have kit for anyone maintaining their facial hair.
              <br><br><br>
-             Price: $150
+             Price: $ <?php echo $prices[$item]['multigroom'] ?>
            </p>
       
 
@@ -126,7 +134,7 @@ else if($_GET['item'] == 'trimmer'){
              A great trimmer to keep your face clean from stuble. This stuble trimmer is lightweight and
              easy to run over your face first thing in the morning.
              <br><br><br><br>
-             Price: $80 
+             Price: $ <?php echo $prices[$item]['stubble'] ?> 
             </p>
             
            
@@ -134,7 +142,7 @@ else if($_GET['item'] == 'trimmer'){
            <p>
             The perfect travel companion to keep you looking sharp while you're on the go.
             <br><br><br><br><br>
-             Price: $35
+             Price: $ <?php echo $prices[$item]['travel'] ?>
            </p>
       
         </div>
@@ -143,7 +151,7 @@ else if($_GET['item'] == 'trimmer'){
         <h3>Select product and quantity for purchase:</h3>
 
         <form action='' method='post' target=''>
-          <input type='hidden' name='$getKey' value="$getData" required>
+          <input type='hidden' name='<?php echo $getKey?>' value="<?php echo $item?>" required>
           <section class="radio", id="trimRadio">
             <input type="radio" id="multigroom" name='variant' value='multigroom'>
             <label for="multigroom">
@@ -160,9 +168,9 @@ else if($_GET['item'] == 'trimmer'){
           </section>
           <p>
             Select quantity: 
-            <button class="button" type="button" onclick="decrementQuantity('$getData')">-</button>
-            <input type='text' name='qty' id='$getData' oninput="inputRangeCheck('$getData')" required>
-            <button class="button" type="button" onclick="incrementQuantity('$getData')">+</button>
+            <button class="button" type="button" onclick="decrementQuantity('<?php echo $item?>')">-</button>
+            <input type='text' name='qty' id='<?php echo $item?>' oninput='inputRangeCheck("<?php echo $item?>", <?php echo json_encode($prices);?> )' required>
+            <button class="button" type="button" onclick="incrementQuantity('<?php echo $item?>')">+</button>
           </p>
 
           <button class="button" type="submit">Add to cart</button>
@@ -175,14 +183,15 @@ else if($_GET['item'] == 'trimmer'){
     </article>
   </main>
   </html>
-  OUTPUT;
-  echo $html;
+ <?php 
 }
 else if($_GET['item'] == 'razor'){
 
-  $getData = $_GET['item'];
+  $item = $_GET['item'];
   $getKey = array_key_first($_GET);
-  $html = <<<"OUTPUT"
+
+  ?>
+  //$html = <<<"OUTPUT"
   <!DOCTYPE HTML>
   <html>
   <main>
@@ -202,7 +211,7 @@ else if($_GET['item'] == 'razor'){
              razor with a hardened blade for the ultimate shaving experience.
              Comes in either Black, wooden or silver handle.
              <br><br><br>
-             Price: $120
+             Price: $ <?php echo $prices[$item]['black'];?>
            </p>
       
         </div>
@@ -211,7 +220,7 @@ else if($_GET['item'] == 'razor'){
         <h3>Select product and quantity for purchase:</h3>
 
         <form action='' method='post' target=''>
-          <input type='hidden' name='$getKey' value="$getData" required>
+          <input type='hidden' name='<?php echo $getKey?>' value="<?php echo $item?>" required>
           <section class="radio", id="razorRadio">
             <input type="radio" id="black" name='variant' value='black'>
             <label for="black">
@@ -228,9 +237,9 @@ else if($_GET['item'] == 'razor'){
           </section>
           <p>
             Select quantity: 
-            <button class="button" type="button" onclick="decrementQuantity('$getData')">-</button>
-            <input type='text' name='qty' id='$getData' oninput="inputRangeCheck('$getData')" required>
-            <button class="button" type="button" onclick="incrementQuantity('$getData')">+</button>
+            <button class="button" type="button" onclick="decrementQuantity('<?php echo $item?>')">-</button>
+            <input type='text' name='qty' id='<?php echo $item?>' oninput='inputRangeCheck("<?php echo $item?>", <?php echo json_encode($prices);?> )' required>
+            <button class="button" type="button" onclick="incrementQuantity('<?php echo $item?>')">+</button>
           </p>
 
           <button class="button" type="submit">Add to cart</button>
@@ -243,15 +252,16 @@ else if($_GET['item'] == 'razor'){
     </article>
   </main>
   </html>
-  OUTPUT;
-  echo $html;
 
+
+ <?php 
 }
 else if ($_GET['item'] == 'product'){
-  $getData = $_GET['item'];
+  $item = $_GET['item'];
   $getKey = array_key_first($_GET);
 
-  $html = <<<"OUTPUT"
+  ?>
+
   <!DOCTYPE HTML>
   <html>
   <main>
@@ -272,8 +282,8 @@ else if ($_GET['item'] == 'product'){
              Makes hair emphasized not causing any oily look thanks to its structure containing wax. 
              A very scientific mix of essences defies the human understanding of scent. 
              Easy to apply thanks to its creamy structure.
-             <br>
-             Price: $25
+             <br><br>
+             Price: $ <?php echo $prices[$item]['hairwax']?>
            </p>
 
            <h3>Barbasol Shaving Cream</h3><img src="../../media/shavingcream.jpg" alt="shaving cream">
@@ -282,8 +292,8 @@ else if ($_GET['item'] == 'product'){
              tradition in shaving for nearly 100 years. The premium Close Shave® formula, 
              with quality ingredients, produces a rich, thick lather and exceptional razor glide. 
              Barbasol Shaving Cream gives you the confidence that comes from a close, comfortable shave.
-             <br>
-             Price: $12
+             <br><br>
+             Price: $ <?php echo $prices[$item]['shavingcream']?>
             </p>
            
            <h3>Proraso Beard Oil</h3><img src="../../media/beardoil.jpg" alt="beard oil">
@@ -292,8 +302,8 @@ else if ($_GET['item'] == 'product'){
             while lightly hydrating the skin underneath to prevent dryness and flakiness. 
             The Proraso Wood & Spice Beard Oil refreshes, moisturises, and protects using natural ingredients 
             like Macademia Oil to promote healthy beard growth and prevent breakages.
-            <br>
-            Price: $20
+            <br><br>
+            Price: $ <?php echo $prices[$item]['beardoil']?>
            </p>
       
         </div>
@@ -302,7 +312,7 @@ else if ($_GET['item'] == 'product'){
         <h3>Select product and quantity for purchase:</h3>
 
         <form action='' method='post' target=''>
-          <input type='hidden' name='$getKey' value="$getData">
+          <input type='hidden' name='<?php echo $getKey?>' value="<?php echo $item?>">
           <section class="radio">
             <input type="radio" id="hairwax" name='variant' value='hairwax'>
             <label for="hairwax">
@@ -319,10 +329,12 @@ else if ($_GET['item'] == 'product'){
           </section>
           <p>
             Select quantity: 
-            <button class="button" type="button" onclick="decrementQuantity('$getData')">-</button>
-            <input type='text' name='qty' id='$getData' oninput="inputRangeCheck('$getData')" required>
-            <button class="button" type="button" onclick="incrementQuantity('$getData')">+</button>
+            <button class="button" type="button" onclick="decrementQuantity('<?php echo $item?>')">-</button>
+            <input type='text' name='qty' id='<?php echo $item?>' oninput='inputRangeCheck("<?php echo $item?>", <?php echo json_encode($prices);?> )' required>
+            <button class="button" type="button" onclick="incrementQuantity('<?php echo $item?>')">+</button>
+            
           </p>
+          <p>SubTotal: $ <span id="subtotal">0.00</span></p>
 
           <button class="button" type="submit">Add to cart</button>
         </form>
@@ -334,8 +346,8 @@ else if ($_GET['item'] == 'product'){
     </article>
   </main>
   </html>
-  OUTPUT;
-  echo $html;
+ 
+ <?php 
 }
 else {
   header("Location: shop.php");

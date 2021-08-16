@@ -1,9 +1,9 @@
 item,variant,price
 comb,allpurpose,20
 comb,finetooth,16
-comb,widetooth,13
+comb,widetooth,12
 trimmer,multigroom,150
-trimmer,stubble,80
+trimmer,stuble,80
 trimmer,travel,35
 razor,black,120
 razor,wood,120
