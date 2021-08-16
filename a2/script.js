@@ -1,4 +1,4 @@
-function incrementQuantity(item) {
+function incrementQuantity(item, prices) {
 
     var inputValue = document.getElementById(item).value;
 
@@ -7,9 +7,10 @@ function incrementQuantity(item) {
         inputValue++;
         document.getElementById(item).value = inputValue;
     }
+    inputRangeCheck(item, prices);
 }
 
-function decrementQuantity(item) {
+function decrementQuantity(item, prices) {
 
     var inputValue = document.getElementById(item).value;
 
@@ -21,6 +22,7 @@ function decrementQuantity(item) {
     else if (inputValue = 1) {
         document.getElementById(item).value = '';
     }
+    inputRangeCheck(item, prices);
 }
 
 function inputRangeCheck(item, price) {
@@ -39,14 +41,15 @@ function inputRangeCheck(item, price) {
 
 
     var vari = variantCheck(item);
-
     var subtotal = calcSubTotal(item, price, vari);
 
     document.getElementById("subtotal").innerHTML = subtotal;
-    
+   
 }
 
 function variantCheck(item) {
+
+    var vari;
 
     if (item == 'comb') {
         if (document.getElementById(id = 'allpurpose').checked) {
@@ -74,6 +77,12 @@ function variantCheck(item) {
         if (document.getElementById(id = 'black').checked) {
             vari = "black";
         }
+        else if (document.getElementById(id = 'wooden').checked) {
+            vari = "wooden";
+        }
+        else if (document.getElementById(id = 'silver').checked) {
+            vari = "silver";
+        }
     }
     else if (item =='product'){
         if (document.getElementById(id = 'hairwax').checked) {
@@ -88,6 +97,7 @@ function variantCheck(item) {
     }
 
     return vari;
+    
 }
 
 function calcSubTotal(item, price, vari){
@@ -98,3 +108,4 @@ function calcSubTotal(item, price, vari){
 
     return subtotal;
 }
+

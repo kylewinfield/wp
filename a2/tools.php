@@ -110,6 +110,8 @@ function debug(){
    echo "</p></div>";
 }
 
+//use json_encode($prices); to get JS version of prices.
+// SEPERATED BY "", IF PARAMTER USE ''
 function readPrices(){
 
   $filename = "prices.txt";
@@ -127,6 +129,7 @@ function readPrices(){
    }
      
 }
+
 
 
 ?>
