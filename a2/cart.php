@@ -5,9 +5,10 @@
   require_once("tools.php");
   if ($_SERVER["REQUEST_METHOD"] == "POST") {
     require("post-validation.php");
-    $prices = readPrices();
-}
 
+}
+  $prices = readPrices();
+  $subtotal = 0;
   headModule();
   topModule();
   navModule();
@@ -21,13 +22,18 @@
       </div>
 
     <section class = "main" id="cartbg">
+
+
+   <div id="cartform">
     
-  
+  <div id="cartcontainer">
+    <h3>Contents:</h3>
   <?php if(isset($_SESSION['cart']))
   for ($i = 0; $i < count($_SESSION['cart']); $i++){ 
     $array = array_keys($_SESSION['cart'][$i]); //return array of keys (only 1 key)
     $item = $array[0]; // this is name of item that we need
     ?>
+
 
   <div id="cart">
 
@@ -38,15 +44,27 @@
     Variant: <?php echo ucfirst($_SESSION['cart'][$i][$item]['variant'])?>
     <br>
     Qty: x <?php echo ucfirst($_SESSION['cart'][$i][$item]['qty'])?>
+    <br>
+    <!-- price per thing in cart -->
+    Total: $ <?php 
+    $total = round($prices[$item][$_SESSION['cart'][$i][$item]['variant']] * $_SESSION['cart'][$i][$item]['qty'], 2);
+    echo $total;
+    $subtotal += $total;
+    ?>
     </p>
 
   </div>
+  
   <br>
+    
+  <?php }  ?>
 
- <?php } ?>
+  <!-- produce subtotal here -->
+  <p id='subtotal'>Subtotal: $<?php echo $subtotal; ?></p>
+  
+</div>
 
-  <!-- form goes here -->
-  <section id="custForm">
+<section id="custForm">
      <form action="receipt.php" method="post">
       <p>First name: </p><br>
       <input type='text' name='fname' id='fname' required>
@@ -63,6 +81,7 @@
      </form>
     </section>
 
+  </div>
 
   </section>
  </main>
