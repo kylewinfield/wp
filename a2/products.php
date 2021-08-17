@@ -3,6 +3,8 @@
 
 <?php 
  require_once("tools.php");
+ $item = $_GET['item'];
+ $prices = readPrices();
 
  if ($_SERVER["REQUEST_METHOD"] == "POST") {
   require("post-validation.php");
@@ -12,9 +14,9 @@
  topModule();
  navModule();
 
- $item = $_GET['item'];
- $getKey = array_key_first($_GET);
- $prices = readPrices();
+ 
+ //$getKey = array_key_first($_GET); unused right now ?
+ 
 
 //'pill' radio selection boxes need to be required still
  
@@ -64,17 +66,17 @@
         <h3>Select cut and quantity for purchase:</h3>
 
         <form action='products.php?item=<?php echo $item?>' method='post'>
-          <input type='hidden' name='<?php echo $getKey?>' value="<?php echo $item?>" required> 
+          <!--<input type='hidden' name='' value="" required> -->
           <section class="radio", id="combRadio">
-            <input type="radio" id="allpurpose" name='variant' value='allpurpose' >
+            <input type="radio" id="allpurpose" name='<?php echo $item?>[variant]' value='allpurpose' >
             <label for="allpurpose">
               <p>All- purpose</p>
             </label>
-            <input type="radio" id="finetooth" name='variant' value='finetooth'>
+            <input type="radio" id="finetooth" name='<?php echo $item?>[variant]' value='finetooth'>
             <label for="finetooth">
               <p>Fine-tooth</p>
             </label>
-            <input type="radio" id="widetooth" name='variant' value='widetooth'>
+            <input type="radio" id="widetooth" name='<?php echo $item?>[variant]' value='widetooth'>
             <label for="widetooth">
               <p>Wide-tooth</p>
             </label>
@@ -83,7 +85,7 @@
             Select quantity: 
             <button class="button" type="button" onclick='decrementQuantity("<?php echo $item?>", 
             <?php echo json_encode($prices);?>)'>-</button>
-            <input type='text' name='qty' id='<?php echo $item?>' oninput='inputRangeCheck("<?php echo $item?>", 
+            <input type='text' name='<?php echo $item?>[qty]' id='<?php echo $item?>' oninput='inputRangeCheck("<?php echo $item?>", 
             <?php echo json_encode($prices);?> )' required>
             <button class="button" type="button" onclick='incrementQuantity("<?php echo $item?>", 
             <?php echo json_encode($prices);?>)'>+</button>
@@ -145,17 +147,17 @@ else if($_GET['item'] == 'trimmer'){
         <h3>Select product and quantity for purchase:</h3>
 
         <form action='products.php?item=<?php echo $item?>' method='post'>
-          <input type='hidden' name='<?php echo $getKey?>' value="<?php echo $item?>" required>
+          <!-- <input type='hidden' name='' value="" required> -->
           <section class="radio", id="trimRadio">
-            <input type="radio" id="multigroom" name='variant' value='multigroom'>
+            <input type="radio" id="multigroom" name='<?php echo $item?>[variant]' value='multigroom'>
             <label for="multigroom">
               <p>Multigroom</p>
             </label>
-            <input type="radio" id="stuble" name='variant' value='stuble'>
+            <input type="radio" id="stuble" name='<?php echo $item?>[variant]' value='stuble'>
             <label for="stuble">
               <p>Stuble</p>
             </label>
-            <input type="radio" id="travel" name='variant' value='travel'>
+            <input type="radio" id="travel" name='<?php echo $item?>[variant]' value='travel'>
             <label for="travel">
               <p>Travel</p>
             </label>
@@ -163,7 +165,7 @@ else if($_GET['item'] == 'trimmer'){
           <p>
             Select quantity: 
             <button class="button" type="button" onclick='decrementQuantity("<?php echo $item?>", <?php echo json_encode($prices);?>)'>-</button>
-            <input type='text' name='qty' id='<?php echo $item?>' oninput='inputRangeCheck("<?php echo $item?>", <?php echo json_encode($prices);?> )' required>
+            <input type='text' name='<?php echo $item?>[qty]' id='<?php echo $item?>' oninput='inputRangeCheck("<?php echo $item?>", <?php echo json_encode($prices);?> )' required>
             <button class="button" type="button" onclick='incrementQuantity("<?php echo $item?>", <?php echo json_encode($prices);?>)'>+</button>
           </p>
           <p>SubTotal: $ <span id="subtotal">0.00</span></p>
@@ -209,17 +211,17 @@ else if($_GET['item'] == 'razor'){
         <h3>Select product and quantity for purchase:</h3>
 
         <form action='products.php?item=<?php echo $item?>' method='post'>
-          <input type='hidden' name='<?php echo $getKey?>' value="<?php echo $item?>" required>
+          <!-- <input type='hidden' name='' value="" required> -->
           <section class="radio", id="razorRadio">
-            <input type="radio" id="black" name='variant' value='black'>
+            <input type="radio" id="black" name='<?php echo $item?>[variant]' value='black'>
             <label for="black">
               <p>Black</p>
             </label>
-            <input type="radio" id="wooden" name='variant' value='wooden'>
+            <input type="radio" id="wooden" name='<?php echo $item?>[variant]' value='wooden'>
             <label for="wooden">
               <p>Wooden</p>
             </label>
-            <input type="radio" id="silver" name='variant' value='silver'>
+            <input type="radio" id="silver" name='<?php echo $item?>[variant]' value='silver'>
             <label for="silver">
               <p>Silver</p>
             </label>
@@ -227,7 +229,7 @@ else if($_GET['item'] == 'razor'){
           <p>
             Select quantity: 
             <button class="button" type="button" onclick='decrementQuantity("<?php echo $item?>", <?php echo json_encode($prices);?>)'>-</button>
-            <input type='text' name='qty' id='<?php echo $item?>' oninput='inputRangeCheck("<?php echo $item?>", <?php echo json_encode($prices);?> )' required>
+            <input type='text' name='<?php echo $item?>[qty]' id='<?php echo $item?>' oninput='inputRangeCheck("<?php echo $item?>", <?php echo json_encode($prices);?> )' required>
             <button class="button" type="button" onclick='incrementQuantity("<?php echo $item?>", <?php echo json_encode($prices);?>)'>+</button>
           </p>
           <p>SubTotal: $ <span id="subtotal">0.00</span></p>
@@ -296,17 +298,17 @@ else if ($_GET['item'] == 'product'){
         <h3>Select product and quantity for purchase:</h3>
 
         <form action='products.php?item=<?php echo $item?>' method='post'>
-          <input type='hidden' name='<?php echo $getKey?>' value="<?php echo $item?>">
+          <!-- <input type='hidden' name='' value=""> -->
           <section class="radio">
-            <input type="radio" id="hairwax" name='variant' value='hairwax'>
+            <input type="radio" id="hairwax" name='<?php echo $item?>[variant]' value='hairwax'>
             <label for="hairwax">
               <p>Hair wax</p>
             </label>
-            <input type="radio" id="shavingcream" name='variant' value='shavingcream'>
+            <input type="radio" id="shavingcream" name='<?php echo $item?>[variant]' value='shavingcream'>
             <label for="shavingcream">
               <p>Shaving cream</p>
             </label>
-            <input type="radio" id="beardoil" name='variant' value='beardoil'>
+            <input type="radio" id="beardoil" name='<?php echo $item?>[variant]' value='beardoil'>
             <label for="beardoil">
               <p>Beard oil</p>
             </label>
@@ -314,7 +316,7 @@ else if ($_GET['item'] == 'product'){
           <p>
             Select quantity: 
             <button class="button" type="button" onclick='decrementQuantity("<?php echo $item?>", <?php echo json_encode($prices);?>)'>-</button>
-            <input type='text' name='qty' id='<?php echo $item?>' oninput='inputRangeCheck("<?php echo $item?>", <?php echo json_encode($prices);?> )' required>
+            <input type='text' name='<?php echo $item?>[qty]' id='<?php echo $item?>' oninput='inputRangeCheck("<?php echo $item?>", <?php echo json_encode($prices);?> )' required>
             <button class="button" type="button" onclick='incrementQuantity("<?php echo $item?>", <?php echo json_encode($prices);?>)'>+</button>
             
           </p>

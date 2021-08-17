@@ -1,6 +1,19 @@
-<?php
-  session_start();
+<!DOCTYPE html>
+<html lang='en'>
 
-// Put your PHP functions and modules here
+<?php
+  require_once("tools.php");
+
+  headModule();
+  topModule();
+  navModule();
+
+  //cart info + form and checkout button
+  // need location to navigate to cart page. maybe in a modudle ?
+
+  bottomModule();
+  debug();
 
 ?>
+
+</html>
