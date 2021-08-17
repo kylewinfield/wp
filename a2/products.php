@@ -16,9 +16,8 @@
 
  
  //$getKey = array_key_first($_GET); unused right now ?
- 
 
-//'pill' radio selection boxes need to be required still
+ //'pill' radio selection boxes need to be required still
  
  if ($_GET['item'] == 'comb'){
 

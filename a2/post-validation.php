@@ -14,6 +14,10 @@ Tip: In files that need to perform POST processing, include this file with this 
   if (isset($_POST['firstname'])) {
     // ... your code here ...
   }
+
+  if(!isset($item)){
+    $item = 'n'; // may be needed for using post-validation on cart.php
+  }
   
   if(isset($_POST[$item])){
 

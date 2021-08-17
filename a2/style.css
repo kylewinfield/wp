@@ -6,7 +6,8 @@ header,
 #service,
 #cuts,
 #servicehead,
-#producthead
+#producthead,
+#carthead
 {
     background-color: rgba(0, 0, 0, 0.945);
     color: white;
@@ -362,9 +363,38 @@ body
     padding-right:10px;
 }
 
+#cart
+{
+    background-color: rgba(255, 255, 255, 0.048);
+    font-size: 25px;
+    text-align: center;
+    margin-left:auto;
+    margin-right:auto;
+    display: block;
+    width: 450px;
+    border: 2px solid rgb(245, 162, 67);
+    margin-top: 30px;
+    margin-bottom: 30px;
+}
+
+
+#carthead
+{
+    text-align: center;
+    margin-right:auto;
+    margin-left:auto;
+}
+
+#cartItem
+{
+    text-align: center;
+    font-size: 45px;
+    margin:15px;
+}
+
 #debug
 {
-    background-color: rgb(0, 0, 0);
+    
     color: white;
     font-family:'Courier New', Courier, monospace;
     font-size: 50px;
