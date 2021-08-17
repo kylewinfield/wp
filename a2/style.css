@@ -238,7 +238,7 @@ input:checked + label
     margin-bottom:20px;
 }
 
-input[type=text]
+input[type=text], input[type=email]
 {
     font-size:30px;
     width:80px;
@@ -356,11 +356,18 @@ body
     font-size: 15px;
 }
 
-#email,
+#emailicon,
 #phone
 {
     filter: invert(100%);
     padding-right:10px;
+}
+
+#carthead
+{
+    text-align: center;
+    margin-right:auto;
+    margin-left:auto;
 }
 
 #cart
@@ -370,31 +377,53 @@ body
     text-align: center;
     margin-left:auto;
     margin-right:auto;
-    display: block;
-    width: 450px;
+    width: 350px;
     border: 2px solid rgb(245, 162, 67);
     margin-top: 30px;
     margin-bottom: 30px;
+    display: inline-block;
 }
 
-
-#carthead
-{
-    text-align: center;
-    margin-right:auto;
-    margin-left:auto;
-}
 
 #cartItem
 {
     text-align: center;
     font-size: 45px;
     margin:15px;
+    display: inline-block;
+}
+
+#custForm
+{
+    background-color: rgba(255, 255, 255, 0.048);
+    display: inline-block;
+    width: 500px;
+    
+    margin-bottom: 50px;
+    border: 2px solid rgb(245, 162, 67);
+
+}
+
+#custForm form
+{
+    margin-left: 30px;
+    margin-bottom:30px;
+}
+
+#custForm input
+{
+    width: 300px;
+}
+
+#custForm p
+{
+    font-size: 30px;
+    margin-bottom: 5px;
 }
 
 #debug
 {
-    
+    background-color: black;
     color: white;
     font-family:'Courier New', Courier, monospace;
     font-size: 50px;

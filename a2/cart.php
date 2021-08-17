@@ -22,9 +22,6 @@
 
     <section class = "main" id="cartbg">
     
-    <!-- form goes here -->
-    
-
   
   <?php if(isset($_SESSION['cart']))
   for ($i = 0; $i < count($_SESSION['cart']); $i++){ 
@@ -32,7 +29,6 @@
     $item = $array[0]; // this is name of item that we need
     ?>
 
-   
   <div id="cart">
 
     <p id="cartItem">
@@ -45,10 +41,28 @@
     </p>
 
   </div>
+  <br>
 
  <?php } ?>
- 
-  
+
+  <!-- form goes here -->
+  <section id="custForm">
+     <form action="receipt.php" method="post">
+      <p>First name: </p><br>
+      <input type='text' name='fname' id='fname' required>
+      <p>Last name: </p><br>
+      <input type='text' name='lname' id='lname' required>
+      <p>Email: </p><br>
+      <input type='email' name='email' id='email' required>
+      <p>Phone: </p><br>
+      <input type='text' minlength='10' maxlength='15' pattern='[0-9]+' name='phoneno' id='phoneno' required>
+      <p>Credit Card Number: </p><br>
+      <input type='text' minlength = '16' maxlength='16' pattern='[0-9]+' name='creditcardno' id='creditcardno' required>
+      <br><br><br>
+      <button id ="custbutton" class='button' type='submit'>Place order</button>
+     </form>
+    </section>
+
 
   </section>
  </main>

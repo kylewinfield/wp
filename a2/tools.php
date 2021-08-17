@@ -76,7 +76,7 @@ function bottomModule(){
 
     <section class="foot" , id="contact">
      <h2>CONTACT US</h2>
-     <p><img id="email" src="../../media/2099199.png" alt="Email Icon" width="15" height="15">
+     <p><img id="emailicon" src="../../media/2099199.png" alt="Email Icon" width="15" height="15">
        secret.barber@fakeemail.com</p>
      <p><img id="phone" src="../../media/597177.png" alt="Phone icon" width="15" height="15">
        +0123 456 789</p>
