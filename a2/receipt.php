@@ -1,4 +1,9 @@
 <?php
+ require_once("tools.php");
+
+
+ debug();
+
 /*
 
 This page must be formatted differently to other website pages. It should:

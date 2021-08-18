@@ -28,14 +28,14 @@
     
   <div id="cartcontainer">
     <h3>Contents:</h3>
-  <?php if(isset($_SESSION['cart']))
-  for ($i = 0; $i < count($_SESSION['cart']); $i++){ 
-    $array = array_keys($_SESSION['cart'][$i]); //return array of keys (only 1 key)
-    $item = $array[0]; // this is name of item that we need
-    ?>
+  <?php if(isset($_SESSION['cart'])){
+          for ($i = 0; $i < count($_SESSION['cart']); $i++){ 
+            $array = array_keys($_SESSION['cart'][$i]); //return array of keys (only 1 key)
+            $item = $array[0]; // this is name of item that we need
+                               //probably a more elegant solution for this, but it works for now
+            ?>
 
-
-  <div id="cart">
+    <div id="cart">
 
     <p id="cartItem">
     <?php echo ucfirst($item);?>
@@ -45,7 +45,6 @@
     <br>
     Qty: x <?php echo ucfirst($_SESSION['cart'][$i][$item]['qty'])?>
     <br>
-    <!-- price per thing in cart -->
     Total: $ <?php 
     $total = round($prices[$item][$_SESSION['cart'][$i][$item]['variant']] * $_SESSION['cart'][$i][$item]['qty'], 2);
     echo $total;
@@ -57,19 +56,19 @@
   
   <br>
     
-  <?php }  ?>
+  <?php }
+  }  ?>
 
-  <!-- produce subtotal here -->
   <p id='subtotal'>Subtotal: $<?php echo $subtotal; ?></p>
   
 </div>
 
 <section id="custForm">
-     <form action="receipt.php" method="post">
+     <form action="cart.php" method="post">
       <p>First name: </p><br>
-      <input type='text' name='fname' id='fname' required>
+      <input type='text' pattern='[a-zA-z]+' name='fname' id='fname' required>
       <p>Last name: </p><br>
-      <input type='text' name='lname' id='lname' required>
+      <input type='text' pattern='[a-zA-z]+' name='lname' id='lname' required>
       <p>Email: </p><br>
       <input type='email' name='email' id='email' required>
       <p>Phone: </p><br>
@@ -77,7 +76,7 @@
       <p>Credit Card Number: </p><br>
       <input type='text' minlength = '16' maxlength='16' pattern='[0-9]+' name='creditcardno' id='creditcardno' required>
       <br><br><br>
-      <button id ="custbutton" class='button' type='submit'>Place order</button>
+      <button class='button' type='submit'>Place order</button>
      </form>
     </section>
 
