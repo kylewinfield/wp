@@ -1,7 +1,7 @@
 <?php
 
 if (!isset($item)){
-  $item = 'z'; //needed for validation on pages that aren't products.php
+  $item = 'z'; //needed for validation on non products.php pages
 }
 
 if(isset($_POST[$item])){
@@ -23,29 +23,30 @@ if(isset($_POST[$item])){
 }
 else{
 
-  $fnameError = 'Error: Please enter a valid first name.';
-  $lnameError = 'Error: Please enter a valid last name.';
-  $emailError = 'Error: Please enter valid email address.';
-  $phonenoError= 'Error: Please enter a valid phone number.';
-  $creditcardnoError= 'Error: Please enter a valid credit card number.';
+  $fnameError = 'Error: Please enter a valid first name.<br>';
+  $lnameError = 'Error: Please enter a valid last name.<br>';
+  $emailError = 'Error: Please enter valid email address.<br>';
+  $phonenoError= 'Error: Please enter a valid phone number.<br>';
+  $creditcardnoError= 'Error: Please enter a valid credit card number.<br>';
 
   $errorsFound = false;
+  $errorMessage = '';
 
 
   if (isset($_POST['fname'])) {
-    if(!preg_match('/^[a-z][A-Z]+$/', $_POST['fname'])){
+    if(!preg_match("/^([a-zA-Z' ]+)$/", $_POST['fname'])){
 
       $errorsFound = true;
-      $errorMessage = $fnameError;
+      $errorMessage .= $fnameError;
     }
     
   }
 
   if (isset($_POST['lname'])){
-    if(!preg_match('/^[a-z][A-Z]+$/', $_POST['lname'])){
+    if(!preg_match("/^([a-zA-Z' ]+)$/", $_POST['lname'])){
 
       $errorsFound = true;
-      $errorMessage = $lnameError;
+      $errorMessage .= $lnameError;
     }
 
   }
@@ -54,15 +55,15 @@ else{
 
     if (!filter_var($_POST['email'], FILTER_VALIDATE_EMAIL)){
       $errorsFound = true;
-      $errorMessage = $emailError;
+      $errorMessage .= $emailError;
     }
   }
 
   if(isset($_POST['phoneno'])){
-    if(!preg_match('/^[0-9]{15}+$/', $_POST['phoneno']))
+    if(!preg_match('/^[0-9]{10,15}+$/', $_POST['phoneno']))
     {
       $errorsFound = true;
-      $errorMessage = $phonenoError;
+      $errorMessage .= $phonenoError;
     }
 
   }
@@ -71,22 +72,21 @@ else{
     if(!preg_match('/^[0-9]{16}+$/', $_POST['creditcardno']))
     {
       $errorsFound = true;
-      $errorMessage = $creditcardnoError;
+      $errorMessage .= $creditcardnoError;
     }
 
   }
 
   if($errorsFound == false){
 
-    $_SESSION['custInfo'][]= $_POST;
+    $_SESSION['custInfo']= $_POST;
     header("Location: receipt.php");
 
   }
-  else{
     echo "<div class= 'errorMsg'>";
     echo $errorMessage;
     echo "</div>";
-  }
+  
 }
  
 ?>

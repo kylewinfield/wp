@@ -14,9 +14,6 @@
  topModule();
  navModule();
 
- 
- //$getKey = array_key_first($_GET); unused right now ?
-
  //'pill' radio selection boxes need to be required still
  
  if ($_GET['item'] == 'comb'){
@@ -62,7 +59,7 @@
         </div>
         
         <div id="purchase">
-        <h3>Select cut and quantity for purchase:</h3>
+        <h3>Select variant and quantity for purchase:</h3>
 
         <form action='products.php?item=<?php echo $item?>' method='post'>
           <!--<input type='hidden' name='' value="" required> -->
@@ -143,7 +140,7 @@ else if($_GET['item'] == 'trimmer'){
         </div>
         
         <div id="purchase">
-        <h3>Select product and quantity for purchase:</h3>
+        <h3>Select variant and quantity for purchase:</h3>
 
         <form action='products.php?item=<?php echo $item?>' method='post'>
           <!-- <input type='hidden' name='' value="" required> -->
@@ -207,7 +204,7 @@ else if($_GET['item'] == 'razor'){
         </div>
         
         <div id="purchase">
-        <h3>Select product and quantity for purchase:</h3>
+        <h3>Select variant and quantity for purchase:</h3>
 
         <form action='products.php?item=<?php echo $item?>' method='post'>
           <!-- <input type='hidden' name='' value="" required> -->
@@ -294,7 +291,7 @@ else if ($_GET['item'] == 'product'){
         </div>
         
         <div id="purchase">
-        <h3>Select product and quantity for purchase:</h3>
+        <h3>Select variant and quantity for purchase:</h3>
 
         <form action='products.php?item=<?php echo $item?>' method='post'>
           <!-- <input type='hidden' name='' value=""> -->

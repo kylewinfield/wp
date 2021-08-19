@@ -45,7 +45,7 @@
     <br>
     Qty: x <?php echo ucfirst($_SESSION['cart'][$i][$item]['qty'])?>
     <br>
-    Total: $ <?php 
+    Total: $<?php 
     $total = round($prices[$item][$_SESSION['cart'][$i][$item]['variant']] * $_SESSION['cart'][$i][$item]['qty'], 2);
     echo $total;
     $subtotal += $total;
