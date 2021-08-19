@@ -8,7 +8,7 @@
 
 }
   $prices = readPrices();
-  $subtotal = 0;
+  $total = 0;
   headModule();
   topModule();
   navModule();
@@ -45,10 +45,10 @@
     <br>
     Qty: x <?php echo ucfirst($_SESSION['cart'][$i][$item]['qty'])?>
     <br>
-    Total: $<?php 
-    $total = round($prices[$item][$_SESSION['cart'][$i][$item]['variant']] * $_SESSION['cart'][$i][$item]['qty'], 2);
-    echo $total;
-    $subtotal += $total;
+    Subtotal: $<?php 
+    $subtotal = round($prices[$item][$_SESSION['cart'][$i][$item]['variant']] * $_SESSION['cart'][$i][$item]['qty'], 2);
+    echo $subtotal;
+    $total += $subtotal;
     ?>
     </p>
 
@@ -59,7 +59,7 @@
   <?php }
   }  ?>
 
-  <p id='subtotal'>Subtotal: $<?php echo $subtotal; ?></p>
+  <p id='totalprice'>Total: $<?php echo $total; ?></p>
   
 </div>
 

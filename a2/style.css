@@ -443,14 +443,14 @@ body
     margin-left:auto;
 }
 
-#subtotal
+#totalprice
 {
     font-size: 30px;
 }
 
 #cartButton
 {
-    text-align:right;
+   
     display: inline-block;
     padding:15px;
     font-family: 'Aleo', serif;
@@ -459,12 +459,14 @@ body
 
 #cartbuttoncontainer
 {
+    display:block;
     text-align: right;
-    margin-right:5%;
+    margin-right: 5%;
 }
 
 #carticon
 {
+    
     margin-bottom:0px;
 }
 
@@ -494,4 +496,94 @@ body
     padding-top: 30px;
     padding-bottom: 30px;
     padding-left:30px;
+}
+
+#receipt 
+{
+    background-image: none;
+    
+}
+
+#receipt table
+{
+    border-collapse: collapse;
+    border-spacing: 0;
+}
+
+#receipt h1
+{
+    text-align:left;
+    font-size: 60px;
+    margin: 0px;
+    padding-left:5%;
+    width: auto;
+    background:rgb(245, 162, 67);
+    color: black;
+    text-decoration:none;
+}
+
+#receipt a:link, #receipt h1:link, #receipt h1:visited, #receipt a:visited
+{
+    color: black;
+    text-decoration:none;
+}
+
+#receipt h2, #clientDetails h2, #clientDetails h3
+{
+    font-size: 30px;
+}
+
+#receipt h2, #receipt p
+{
+    margin: 0;
+}
+
+#receipt h3
+{
+    color: black;
+    font-size: 25px;
+}
+
+#tablenames, #receiptTotal
+{
+    background:rgb(245, 162, 67);
+    margin: 5px;
+}
+
+#receipt td, #clientDetails
+{
+    font-size:20px;
+}
+
+#receipt p, #receipt td
+{
+    padding:20px;
+}
+
+#receipt table
+{
+    font-size: 20px;
+    background-color:white;
+}
+
+.receiptdata, #receiptTotal
+{
+    border-bottom: 1px solid black;
+}
+
+#clientDetails
+{
+    margin-left: 2%;
+}
+
+#clientDetails h2, #client details h3
+{
+    margin-left: -1%;
+}
+
+#orderdate
+{
+    margin-top: 40px;
+    margin-bottom: 20px;
+    margin-left: 1%;
 }

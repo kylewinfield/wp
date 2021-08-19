@@ -14,7 +14,6 @@
  topModule();
  navModule();
  
-
  //'pill' radio selection boxes need to be required still
  
  if ($_GET['item'] == 'comb'){
@@ -25,7 +24,7 @@
      <article>
 
       <div id="producthead">
-        <h2>Combs</h2>
+       <h2>Combs</h2>
       </div>
 
       <?php cartModule();?>
@@ -65,17 +64,17 @@
         <h3>Select variant and quantity for purchase:</h3>
 
         <form action='products.php?item=<?php echo $item?>' method='post'>
-          <!--<input type='hidden' name='' value="" required> -->
+        
           <section class="radio", id="combRadio">
-            <input type="radio" id="allpurpose" name='<?php echo $item?>[variant]' value='allpurpose' >
+            <input type="radio" id="allpurpose" name='<?php echo $item?>[variant]' value='allpurpose' required>
             <label for="allpurpose">
               <p>All- purpose</p>
             </label>
-            <input type="radio" id="finetooth" name='<?php echo $item?>[variant]' value='finetooth'>
+            <input type="radio" id="finetooth" name='<?php echo $item?>[variant]' value='finetooth' required>
             <label for="finetooth">
               <p>Fine-tooth</p>
             </label>
-            <input type="radio" id="widetooth" name='<?php echo $item?>[variant]' value='widetooth'>
+            <input type="radio" id="widetooth" name='<?php echo $item?>[variant]' value='widetooth' required>
             <label for="widetooth">
               <p>Wide-tooth</p>
             </label>
@@ -148,17 +147,17 @@ else if($_GET['item'] == 'trimmer'){
         <h3>Select variant and quantity for purchase:</h3>
 
         <form action='products.php?item=<?php echo $item?>' method='post'>
-          <!-- <input type='hidden' name='' value="" required> -->
+  
           <section class="radio", id="trimRadio">
-            <input type="radio" id="multigroom" name='<?php echo $item?>[variant]' value='multigroom'>
+            <input type="radio" id="multigroom" name='<?php echo $item?>[variant]' value='multigroom' required>
             <label for="multigroom">
               <p>Multigroom</p>
             </label>
-            <input type="radio" id="stuble" name='<?php echo $item?>[variant]' value='stuble'>
+            <input type="radio" id="stuble" name='<?php echo $item?>[variant]' value='stuble' required>
             <label for="stuble">
               <p>Stuble</p>
             </label>
-            <input type="radio" id="travel" name='<?php echo $item?>[variant]' value='travel'>
+            <input type="radio" id="travel" name='<?php echo $item?>[variant]' value='travel' required>
             <label for="travel">
               <p>Travel</p>
             </label>
@@ -214,17 +213,16 @@ else if($_GET['item'] == 'razor'){
         <h3>Select variant and quantity for purchase:</h3>
 
         <form action='products.php?item=<?php echo $item?>' method='post'>
-          <!-- <input type='hidden' name='' value="" required> -->
           <section class="radio", id="razorRadio">
-            <input type="radio" id="black" name='<?php echo $item?>[variant]' value='black'>
+            <input type="radio" id="black" name='<?php echo $item?>[variant]' value='black' required>
             <label for="black">
               <p>Black</p>
             </label>
-            <input type="radio" id="wooden" name='<?php echo $item?>[variant]' value='wooden'>
+            <input type="radio" id="wooden" name='<?php echo $item?>[variant]' value='wooden' required>
             <label for="wooden">
               <p>Wooden</p>
             </label>
-            <input type="radio" id="silver" name='<?php echo $item?>[variant]' value='silver'>
+            <input type="radio" id="silver" name='<?php echo $item?>[variant]' value='silver' required>
             <label for="silver">
               <p>Silver</p>
             </label>
@@ -303,17 +301,16 @@ else if ($_GET['item'] == 'product'){
         <h3>Select variant and quantity for purchase:</h3>
 
         <form action='products.php?item=<?php echo $item?>' method='post'>
-          <!-- <input type='hidden' name='' value=""> -->
           <section class="radio">
-            <input type="radio" id="hairwax" name='<?php echo $item?>[variant]' value='hairwax'>
+            <input type="radio" id="hairwax" name='<?php echo $item?>[variant]' value='hairwax' required>
             <label for="hairwax">
               <p>Hair wax</p>
             </label>
-            <input type="radio" id="shavingcream" name='<?php echo $item?>[variant]' value='shavingcream'>
+            <input type="radio" id="shavingcream" name='<?php echo $item?>[variant]' value='shavingcream' required>
             <label for="shavingcream">
               <p>Shaving cream</p>
             </label>
-            <input type="radio" id="beardoil" name='<?php echo $item?>[variant]' value='beardoil'>
+            <input type="radio" id="beardoil" name='<?php echo $item?>[variant]' value='beardoil' required>
             <label for="beardoil">
               <p>Beard oil</p>
             </label>
