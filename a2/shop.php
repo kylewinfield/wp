@@ -14,6 +14,9 @@
       <div id="servicehead">
       <h2>Shop</h2>
       </div>
+
+      <?php cartModule();?>
+
       <section id="cuts">
 
         <div id="everycut">

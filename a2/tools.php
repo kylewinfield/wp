@@ -35,7 +35,7 @@ function topModule(){
   <body>
   <header>
     <div id="top">
-      <img id="logo" src="../../media/razor.png" alt="sblogo">
+      <img id="logo" src="../../media/razor.png" alt="sblogo" >
       <h1>SECRET BARBER</h1>
     </div>
   </header>
@@ -55,6 +55,24 @@ function navModule(){
     <a href="#contact"> Contact</a>
   </div>
   </nav>
+  <html>
+ OUTPUT;
+ echo $html;
+}
+
+function cartModule(){
+  $html = <<<"OUTPUT"
+  <!DOCTYPE HTML>
+  <html>
+  <div id="cartbuttoncontainer">
+  <a href="cart.php">
+  <div class="button" id="cartButton">
+   <span>Cart</span>
+   <img id="carticon" src="../../media/1170678.png" alt="cart icon" width="60" height="60">
+   
+  </div>
+  </a>
+  </div>
   <html>
  OUTPUT;
  echo $html;

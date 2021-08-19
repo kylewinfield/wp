@@ -28,6 +28,7 @@
  //Generated receipt goes here:
  
 
+
  //unset($_SESSION['cart']); //reset cart and customer information after successful order
  //unset($_SESSION['custInfo'])
  debug();

@@ -13,6 +13,7 @@
  headModule();
  topModule();
  navModule();
+ 
 
  //'pill' radio selection boxes need to be required still
  
@@ -26,6 +27,8 @@
       <div id="producthead">
         <h2>Combs</h2>
       </div>
+
+      <?php cartModule();?>
 
       <section class="main" , id="products">
 
@@ -108,6 +111,8 @@ else if($_GET['item'] == 'trimmer'){
         <h2>Trimmers</h2>
       </div>
 
+      <?php cartModule();?>
+
       <section class="main" , id="products">
 
         <div id="productcontainer">
@@ -188,6 +193,8 @@ else if($_GET['item'] == 'razor'){
         <h2>Razors</h2>
       </div>
 
+      <?php cartModule();?>
+
       <section class="main" , id="products">
 
         <div id="productcontainer">
@@ -252,6 +259,8 @@ else if ($_GET['item'] == 'product'){
       <div id="producthead">
         <h2>Products</h2>
       </div>
+
+      <?php cartModule();?>
 
       <section class="main" , id="products">
 

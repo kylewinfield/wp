@@ -448,6 +448,26 @@ body
     font-size: 30px;
 }
 
+#cartButton
+{
+    text-align:right;
+    display: inline-block;
+    padding:15px;
+    font-family: 'Aleo', serif;
+    font-size: 50px;
+}
+
+#cartbuttoncontainer
+{
+    text-align: right;
+    margin-right:5%;
+}
+
+#carticon
+{
+    margin-bottom:0px;
+}
+
 .errorMsg
 {
     background-color: rgba(0, 0, 0, 0.945);
