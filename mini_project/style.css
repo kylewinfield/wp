@@ -1,0 +1,111 @@
+/* Note to self: Mobile first design, ie single column layout as default */
+
+
+.formCell
+{
+    padding-right:30px;
+}
+
+.formRow, .formCell
+{
+    display:block;
+
+}
+#rememberMe
+{
+    margin-top:15px;
+    margin-bottom:15px;
+}
+
+#loginToggle
+{
+    display: none;
+}
+
+#topContainer
+{
+    border: unset;
+    background: unset;
+    margin:0px;
+    padding:0px;
+    
+}
+
+
+nav
+{
+    vertical-align:top;
+}
+
+
+#order input[type=text], #order input[type=email], #order input[type=tel], #order input[type=submit]
+{
+    width:100%;
+    max-width:630px;
+}
+
+.invis
+{
+    font-size:0px;
+}
+
+@media only screen and (min-width : 800px) {
+
+#topContainer
+{
+    display:table;
+}
+
+header, nav
+{
+    display: inline-block;
+    display: table-cell;
+}
+
+header
+{
+    min-width: 350px;
+}
+
+
+nav
+{
+   width:100%;
+   text-align:right;
+   margin-left:5px;
+}
+
+
+#order
+{
+    display: table;
+}  
+
+.formRow
+{
+    display: table-row;
+    
+    width:100%;
+    max-width:300px;
+}
+
+
+#order input[type=text], #order input[type=email], #order input[type=tel], .formCell, .invis
+{
+    display:table-cell;
+    margin-bottom:15px;
+    
+}
+
+#order input[type=text], #order input[type=email], #order input[type=tel], #order input[type=submit]
+{
+    width:630px;
+}
+
+
+#remember
+{
+    display:inline-block;
+}
+
+}
